@@ -1,0 +1,14 @@
+.DS_Store
+.private/
+data/orders.json
+data/orders_raw.json
+data/meituan_orders.csv
+web/node_modules/
+web/.npm-cache/
+web/dist/
+web/.vite/
+design-qa-assets/
+work/
+*.log
+__pycache__/
+*.pyc

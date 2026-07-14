@@ -1,0 +1,10 @@
+{
+  "name": "点餐宝",
+  "short_name": "点餐宝",
+  "description": "30秒帮你决定今天吃什么",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3fbf7",
+  "theme_color": "#f3fbf7"
+}

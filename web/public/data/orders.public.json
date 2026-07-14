@@ -1,0 +1,2684 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-14T06:32:32+00:00",
+  "sourceOrderCount": 158,
+  "publishedOrderCount": 156,
+  "locations": [
+    {
+      "code": "home_xuhui",
+      "label": "家（徐汇电影华苑）",
+      "shortLabel": "家 · 徐汇电影华苑"
+    },
+    {
+      "code": "office_xintiandi",
+      "label": "新天地（徕卡办公室）",
+      "shortLabel": "新天地 · 徕卡办公室"
+    }
+  ],
+  "orders": [
+    {
+      "restaurant": "乐川汇·豆花川菜（泰康路店）",
+      "items": [
+        {
+          "name": "盐菜回锅肉单人套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-12",
+      "time": "10:57",
+      "total": 39.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "秘制鸡腿肉单人套餐+主食自选/包含口味",
+          "quantity": 1
+        },
+        {
+          "name": "蒜香小排",
+          "quantity": 1
+        },
+        {
+          "name": "特价菜品3选1一份",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-11",
+      "time": "18:02",
+      "total": 32.67,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "肯德基宅急送（天钥桥路一店）",
+      "items": [
+        {
+          "name": "堡卷随心选3件套",
+          "quantity": 1
+        },
+        {
+          "name": "辣翅买一送一",
+          "quantity": 1
+        },
+        {
+          "name": "避风塘大虾塔可",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-10",
+      "time": "19:33",
+      "total": 71.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "山石榴·贵州菜（龙华会店）",
+      "items": [
+        {
+          "name": "花溪牛肉粉+酸萝卜+荷包蛋",
+          "quantity": 1
+        },
+        {
+          "name": "威宁洋芋粑",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-09",
+      "time": "18:39",
+      "total": 38.06,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "老百姓大药房（龙水北路店）",
+      "items": [
+        {
+          "name": "醋酸地塞米松口腔贴片0.3mg*10片/板/盒",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-08",
+      "time": "18:52",
+      "total": 24.19,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "湘霸王·地道湖南味·老坛剁椒鱼头（中山西路店）",
+      "items": [
+        {
+          "name": "五常大米",
+          "quantity": 2
+        },
+        {
+          "name": "招牌尖椒炒仔鸡",
+          "quantity": 1
+        },
+        {
+          "name": "清炒空心菜",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-08",
+      "time": "18:39",
+      "total": 46.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "蔡澜点心·粤菜(上海龙华会店)",
+      "items": [
+        {
+          "name": "排骨凤爪饭套餐",
+          "quantity": 1
+        },
+        {
+          "name": "单人套餐",
+          "quantity": 1
+        },
+        {
+          "name": "秘制酱汁",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-07",
+      "time": "19:10",
+      "total": 76.4,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "康复之家医疗器械(漕溪路店)",
+      "items": [
+        {
+          "name": "口腔溃疡膜Φ1.2cm*12片/盒辅助治疗口腔溃疡贴",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-07",
+      "time": "13:16",
+      "total": 17.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "六姐霸气嫩牛套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-07",
+      "time": "11:57",
+      "total": 29.13,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "安又胖韩式拌饭·料理（上海美罗城店）",
+      "items": [
+        {
+          "name": "韩式萝卜片",
+          "quantity": 1
+        },
+        {
+          "name": "爆汁炸鸡块",
+          "quantity": 1
+        },
+        {
+          "name": "安又胖韩式冷面单人餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-04",
+      "time": "20:07",
+      "total": 37.59,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "湘霸王·地道湖南味·老坛剁椒鱼头（中山西路店）",
+      "items": [
+        {
+          "name": "招牌尖椒炒仔鸡",
+          "quantity": 1
+        },
+        {
+          "name": "五常大米",
+          "quantity": 2
+        },
+        {
+          "name": "清炒空心菜",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-04",
+      "time": "13:17",
+      "total": 47.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "蔡澜点心·粤菜(上海龙华会店)",
+      "items": [
+        {
+          "name": "排骨凤爪饭套餐",
+          "quantity": 1
+        },
+        {
+          "name": "单人套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-07-01",
+      "time": "18:46",
+      "total": 76.4,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（沪闵路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-29",
+      "time": "18:23",
+      "total": 29.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选/包含口味",
+          "quantity": 1
+        },
+        {
+          "name": "五常稻花香米饭",
+          "quantity": 2
+        },
+        {
+          "name": "蒜香小排",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-28",
+      "time": "19:24",
+      "total": 77.06,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "味千拉面（One-ITC店）",
+      "items": [
+        {
+          "name": "麻麻辣辣牛肉饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-28",
+      "time": "11:40",
+      "total": 33.2,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "永和大王(宜山SH058店)",
+      "items": [
+        {
+          "name": "里脊肉葱抓蛋饼4件套单人餐",
+          "quantity": 1
+        },
+        {
+          "name": "手工现炸油条",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-27",
+      "time": "09:26",
+      "total": 28.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小杨生煎（东安路店）",
+      "items": [
+        {
+          "name": "油豆腐牛肉粉丝汤",
+          "quantity": 1
+        },
+        {
+          "name": "辣皮子肥牛生煎",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-26",
+      "time": "18:56",
+      "total": 36.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "六姐霸气嫩牛套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-26",
+      "time": "11:58",
+      "total": 34.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "七家湾牛肉锅贴（白下路店）",
+      "items": [
+        {
+          "name": "干切牛肉汤类+牛肉锅贴1两",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-21",
+      "time": "08:32",
+      "total": 24.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "南京传统油条蒸饭·麻团乌饭（观音阁店）",
+      "items": [
+        {
+          "name": "全家福麻团乌饭+豆浆",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-21",
+      "time": "08:31",
+      "total": 17.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "老米记酒酿铺（丰富路店)",
+      "items": [
+        {
+          "name": "酒酿红豆豆花冻+古法桂花酒酿",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-20",
+      "time": "19:32",
+      "total": 24.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "蔡澜点心·粤菜(上海龙华会店)",
+      "items": [
+        {
+          "name": "单人套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-18",
+      "time": "19:04",
+      "total": 37.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "山林野果·云南食集(博荟广场店)",
+      "items": [
+        {
+          "name": "招牌酱香牛腱子铜锅米线",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-13",
+      "time": "12:04",
+      "total": 37.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "味千拉面（One-ITC店）",
+      "items": [
+        {
+          "name": "麻麻辣辣牛肉饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-11",
+      "time": "18:31",
+      "total": 30.2,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        },
+        {
+          "name": "虾滑",
+          "quantity": 1
+        },
+        {
+          "name": "金针菇",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-10",
+      "time": "18:39",
+      "total": 69.94,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "乐川汇·豆花川菜（泰康路店）",
+      "items": [
+        {
+          "name": "泰椒土豆丝+峨眉老豆花+米饭",
+          "quantity": 1
+        },
+        {
+          "name": "9秒爆鲜牛肉",
+          "quantity": 1
+        },
+        {
+          "name": "招牌软糯耙鸡爪/1只",
+          "quantity": 2
+        }
+      ],
+      "date": "2026-06-07",
+      "time": "11:03",
+      "total": 110.4,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（绿地缤纷城店）",
+      "items": [
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选/包含口味",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-05",
+      "time": "18:39",
+      "total": 30.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "肖四女乐山跷脚牛肉(百脑汇店)",
+      "items": [
+        {
+          "name": "砂锅芸豆+鲜牛肉+米饭+可乐",
+          "quantity": 1
+        },
+        {
+          "name": "辣椒干碟",
+          "quantity": 1
+        },
+        {
+          "name": "收藏zeng送",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-05",
+      "time": "18:39",
+      "total": 31.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）",
+      "items": [
+        {
+          "name": "豆干包里脊肉",
+          "quantity": 1
+        },
+        {
+          "name": "苕皮包肉沫",
+          "quantity": 1
+        },
+        {
+          "name": "烤豆角串",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-06-03",
+      "time": "18:10",
+      "total": 57.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "六姐霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "肥牛卷",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-31",
+      "time": "19:28",
+      "total": 42.1,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "山城重庆小面（南京西路店）",
+      "items": [
+        {
+          "name": "满碗是料·宜宾燃面",
+          "quantity": 1
+        },
+        {
+          "name": "老麻抄手",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-30",
+      "time": "18:20",
+      "total": 55.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宽的窄的面馆",
+      "items": [
+        {
+          "name": "宜宾燃面",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-28",
+      "time": "18:28",
+      "total": 29.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小杨生煎（东安路店）",
+      "items": [
+        {
+          "name": "麻辣牛肉酱拌面",
+          "quantity": 1
+        },
+        {
+          "name": "小杨生煎",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-27",
+      "time": "18:32",
+      "total": 39.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "皇不管夜包子(徐汇店)",
+      "items": [
+        {
+          "name": "全家福小笼包",
+          "quantity": 1
+        },
+        {
+          "name": "茶叶蛋",
+          "quantity": 1
+        },
+        {
+          "name": "白米粥",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-23",
+      "time": "10:14",
+      "total": 27.44,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "山东杂粮煎饼（天钥桥路店）",
+      "items": [
+        {
+          "name": "杂粮饼十蛋十脆饼十烤肠十里脊十辣条",
+          "quantity": 1
+        },
+        {
+          "name": "生菜",
+          "quantity": 1
+        },
+        {
+          "name": "土豆丝",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-23",
+      "time": "10:10",
+      "total": 26.4,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "六姐霸气嫩牛套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-22",
+      "time": "18:28",
+      "total": 35.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "飞科官方旗舰店（钦州北路）",
+      "items": [
+        {
+          "name": "飞科高速电吹风机负离子养发6371灰",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-14",
+      "time": "20:16",
+      "total": 190.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小杨生煎(天钥桥路餐厅)",
+      "items": [
+        {
+          "name": "小杨锅贴单人餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-12",
+      "time": "18:32",
+      "total": 24.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐牛油",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-09",
+      "time": "18:50",
+      "total": 36.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宽的窄的面馆(茂名路店)",
+      "items": [
+        {
+          "name": "宜宾燃面",
+          "quantity": 1
+        },
+        {
+          "name": "笋子牛肉米粉",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-08",
+      "time": "18:37",
+      "total": 65.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宽的窄的面馆(茂名路店)",
+      "items": [
+        {
+          "name": "笋子牛肉米粉",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-08",
+      "time": "18:36",
+      "total": 29.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（沪闵路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-07",
+      "time": "19:30",
+      "total": 29.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "永和大王·100%现磨豆浆·卤肉饭(宜山SH058店)",
+      "items": [
+        {
+          "name": "里脊肉甜辣手抓蛋饼3件套",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-05",
+      "time": "08:41",
+      "total": 24.1,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）",
+      "items": [
+        {
+          "name": "微辣",
+          "quantity": 1
+        },
+        {
+          "name": "船盒",
+          "quantity": 1
+        },
+        {
+          "name": "烤辣椒串",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-04",
+      "time": "17:23",
+      "total": 83.57,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "对酒当歌地道川菜（肇嘉浜路店）",
+      "items": [
+        {
+          "name": "武林香辣鸭头",
+          "quantity": 1
+        },
+        {
+          "name": "鲜椒土豆丝+米饭1份",
+          "quantity": 1
+        },
+        {
+          "name": "开胃小菜",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-05-03",
+      "time": "18:04",
+      "total": 62.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "皇不管夜包子(徐汇店)",
+      "items": [
+        {
+          "name": "网红小笼包麻辣味",
+          "quantity": 1
+        },
+        {
+          "name": "白米粥",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-25",
+      "time": "11:17",
+      "total": 16.24,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "叮当快药(上海漕溪路店)",
+      "items": [
+        {
+          "name": "复方氨酚烷胺胶囊8粒*2板/盒",
+          "quantity": 1
+        },
+        {
+          "name": "阿莫西林胶囊0.25g*30粒/盒",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-25",
+      "time": "09:01",
+      "total": 47.74,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-24",
+      "time": "18:58",
+      "total": 34.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小杨生煎（东安路店）",
+      "items": [
+        {
+          "name": "小杨生煎",
+          "quantity": 1
+        },
+        {
+          "name": "麻辣牛肉酱拌面",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-23",
+      "time": "18:50",
+      "total": 39.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "干锅牛蛙单人套餐+主食自选",
+          "quantity": 1
+        },
+        {
+          "name": "嫩牛肉",
+          "quantity": 1
+        },
+        {
+          "name": "麻辣香辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-21",
+      "time": "19:13",
+      "total": 34.64,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "藕巷藕汤饭",
+      "items": [
+        {
+          "name": "藕汤烫饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-20",
+      "time": "18:38",
+      "total": 29.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "肯德基宅急送（天钥桥路店）",
+      "items": [
+        {
+          "name": "更香更辣鸡腿堡4件套",
+          "quantity": 1
+        },
+        {
+          "name": "热辣双拼炸鸡任选2件",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-19",
+      "time": "19:27",
+      "total": 47.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "山城重庆小面（南京西路店）",
+      "items": [
+        {
+          "name": "老麻抄手",
+          "quantity": 1
+        },
+        {
+          "name": "牛肉抄手",
+          "quantity": 1
+        },
+        {
+          "name": "网红淀粉肠",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-19",
+      "time": "12:28",
+      "total": 57.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）",
+      "items": [
+        {
+          "name": "烤辣椒串",
+          "quantity": 1
+        },
+        {
+          "name": "烤豆角串",
+          "quantity": 1
+        },
+        {
+          "name": "烤鱼豆腐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-18",
+      "time": "19:14",
+      "total": 42.18,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "茶百道（天钥桥路店）",
+      "items": [
+        {
+          "name": "西瓜啵啵",
+          "quantity": 1
+        },
+        {
+          "name": "斑斓青团",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-18",
+      "time": "16:29",
+      "total": 20.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "怂火锅厂·火锅冒菜（上海美罗城店）",
+      "items": [
+        {
+          "name": "怂厂随心搭+奶茶自选豪华套餐",
+          "quantity": 1
+        },
+        {
+          "name": "响铃卷",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-16",
+      "time": "18:22",
+      "total": 36.02,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "紫燕百味鸡（宣化店）",
+      "items": [
+        {
+          "name": "夫妻肺片单人饭套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-16",
+      "time": "12:20",
+      "total": 29.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "鱼酷活鱼烤鱼（徐家汇店）",
+      "items": [
+        {
+          "name": "活鱼烤鱼一人食-含米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-14",
+      "time": "18:13",
+      "total": 39.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐牛油",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-13",
+      "time": "18:09",
+      "total": 32.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "安安宠医（凯旋路店）",
+      "items": [
+        {
+          "name": "英国普乐高宁犬猫屎肠球菌止泻调理肠胃腹泻呕吐15ml",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-13",
+      "time": "17:27",
+      "total": 89.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-10",
+      "time": "18:28",
+      "total": 33.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-06",
+      "time": "12:42",
+      "total": 32.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "达美乐比萨（南丹路店）",
+      "items": [
+        {
+          "name": "酥香嫩鱼块",
+          "quantity": 1
+        },
+        {
+          "name": "金沙咸蛋黄嫩鸡比萨",
+          "quantity": 1
+        },
+        {
+          "name": "零度可乐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-05",
+      "time": "13:02",
+      "total": 72.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "藕巷藕汤饭",
+      "items": [
+        {
+          "name": "藕汤烫饭",
+          "quantity": 1
+        },
+        {
+          "name": "莲藕排骨汤",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-03",
+      "time": "18:40",
+      "total": 68.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-03",
+      "time": "12:46",
+      "total": 30.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "東寶清迈小馆（凯旋路店)",
+      "items": [
+        {
+          "name": "招牌打抛饭配流心蛋",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-04-02",
+      "time": "18:16",
+      "total": 32.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（凯旋路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-31",
+      "time": "18:20",
+      "total": 29.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选/包含口味",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-30",
+      "time": "18:14",
+      "total": 26.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "ZOONANA首尔炸鸡（徐家汇店）",
+      "items": [
+        {
+          "name": "韩式炸无骨鸡块2块",
+          "quantity": 1
+        },
+        {
+          "name": "酸脆爽口解腻萝卜.",
+          "quantity": 1
+        },
+        {
+          "name": "BHC同款芝士球1颗",
+          "quantity": 2
+        }
+      ],
+      "date": "2026-03-29",
+      "time": "19:04",
+      "total": 48.29,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "巡越夜包子（徐汇店）",
+      "items": [
+        {
+          "name": "现蒸鲜肉小笼包7个＋慢熬南瓜粥",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-29",
+      "time": "08:58",
+      "total": 23.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-27",
+      "time": "18:39",
+      "total": 30.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宽的窄的面馆(茂名路店)",
+      "items": [
+        {
+          "name": "宜宾燃面",
+          "quantity": 1
+        },
+        {
+          "name": "烫时令蔬菜",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-26",
+      "time": "18:15",
+      "total": 38.2,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "盛果仓（茂名公馆店·果切·水果捞）",
+      "items": [
+        {
+          "name": "柚子芒果船·固体杨枝甘露约250-300克",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-26",
+      "time": "16:21",
+      "total": 25.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（沪闵路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-25",
+      "time": "11:37",
+      "total": 29.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "夺欢喜·贵州酸汤冒菜（百脑汇店）",
+      "items": [
+        {
+          "name": "娃娃菜",
+          "quantity": 1
+        },
+        {
+          "name": "贵州酸汤锅底",
+          "quantity": 1
+        },
+        {
+          "name": "手打鲜虾滑单人餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-23",
+      "time": "18:54",
+      "total": 66.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "CHAIKU(西岸梦中心店）",
+      "items": [
+        {
+          "name": "泰奶冰淇淋茶",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-22",
+      "time": "14:57",
+      "total": 23.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "鱼酷活鱼烤鱼（上海龙华会店）",
+      "items": [
+        {
+          "name": "活鱼烤鱼一人食-含米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-18",
+      "time": "18:19",
+      "total": 32.1,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选/包含口味",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-17",
+      "time": "18:21",
+      "total": 30.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（沪闵路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-16",
+      "time": "18:21",
+      "total": 23.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选/包含口味",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-13",
+      "time": "18:14",
+      "total": 30.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（沪闵路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-11",
+      "time": "18:16",
+      "total": 29.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "阿食云南生烫牛肉米线（第B110档口美食城店）",
+      "items": [
+        {
+          "name": "网红炸蛋",
+          "quantity": 1
+        },
+        {
+          "name": "豌豆尖",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-10",
+      "time": "18:20",
+      "total": 31.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "三米粥铺(徐汇店)",
+      "items": [
+        {
+          "name": "20选5单人自选套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-09",
+      "time": "18:19",
+      "total": 20.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "鸡脚筋",
+          "quantity": 1
+        },
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-08",
+      "time": "18:01",
+      "total": 40.1,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "肯德基宅急送（天钥桥路店）",
+      "items": [
+        {
+          "name": "堡卷随心选3件套",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-08",
+      "time": "11:45",
+      "total": 26.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "盛果仓（徐汇店·果切·水果捞）",
+      "items": [
+        {
+          "name": "水果夹干噎酸奶黄肉菠萝蜜250克",
+          "quantity": 1
+        },
+        {
+          "name": "乌梅凤梨+乌梅番茄",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-08",
+      "time": "11:36",
+      "total": 37.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "国大药房（龙华东店）",
+      "items": [
+        {
+          "name": "牛奶复原乳245ml",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-08",
+      "time": "10:12",
+      "total": 26.4,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "邕味张记老友粉（中山西路店）",
+      "items": [
+        {
+          "name": "鲜嫩牛肉扁粉",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-08",
+      "time": "08:36",
+      "total": 35.39,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "阿食云南生烫牛肉米线（第B110档口美食城店）",
+      "items": [
+        {
+          "name": "老手艺炸肉酱米线+小吃自选5选1",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-07",
+      "time": "18:55",
+      "total": 25.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "三分脆现烤三明治（徐汇店）",
+      "items": [
+        {
+          "name": "双人自选帕尼尼+三明治",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-07",
+      "time": "08:01",
+      "total": 34.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-06",
+      "time": "18:21",
+      "total": 30.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "鱼酷活鱼烤鱼（上海龙华会店）",
+      "items": [
+        {
+          "name": "活鱼烤鱼一人食-含米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-04",
+      "time": "18:18",
+      "total": 33.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "三米粥铺(徐汇万体馆店)",
+      "items": [
+        {
+          "name": "香脆牛肉饼",
+          "quantity": 1
+        },
+        {
+          "name": "青菜玉米粥",
+          "quantity": 1
+        },
+        {
+          "name": "青菜瘦肉粥",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-03",
+      "time": "18:34",
+      "total": 29.4,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "浆小白·肠粉·小笼包·豆浆夜市（交通大学店）",
+      "items": [
+        {
+          "name": "无矾大油条",
+          "quantity": 2
+        },
+        {
+          "name": "小白豆浆",
+          "quantity": 2
+        },
+        {
+          "name": "茶叶蛋1个",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-03",
+      "time": "07:17",
+      "total": 24.35,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（沪闵路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-03-02",
+      "time": "18:15",
+      "total": 24.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小杨生煎（东安路店）",
+      "items": [
+        {
+          "name": "小杨饱饱餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-02-25",
+      "time": "18:20",
+      "total": 31.4,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "金辰鲜花店（玫瑰花.生日鲜花.开业花篮）",
+      "items": [
+        {
+          "name": "11枝红玫瑰鲜花花束送女友爱人表白恋人生日送花花店送花上门",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-02-16",
+      "time": "12:15",
+      "total": 88.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "肯德基宅急送（天钥桥路店）",
+      "items": [
+        {
+          "name": "新春汉堡随心拼",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-02-11",
+      "time": "18:51",
+      "total": 38.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小杨生煎（东安路店）",
+      "items": [
+        {
+          "name": "虾兵蟹将套餐B",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-02-11",
+      "time": "11:15",
+      "total": 39.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小杨生煎（东安路店）",
+      "items": [
+        {
+          "name": "现炖鲜鸡丝汤",
+          "quantity": 1
+        },
+        {
+          "name": "虾仁扬州蛋炒饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-02-05",
+      "time": "18:19",
+      "total": 29.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选",
+          "quantity": 1
+        },
+        {
+          "name": "五常稻花香米饭",
+          "quantity": 1
+        },
+        {
+          "name": "麻辣香辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-02-03",
+      "time": "18:19",
+      "total": 31.76,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-31",
+      "time": "19:08",
+      "total": 27.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "鱼酷活鱼烤鱼（上海龙华会店）",
+      "items": [
+        {
+          "name": "活鱼烤鱼一人食-含米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-31",
+      "time": "19:06",
+      "total": 32.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "肯德基宅急送（天钥桥路店）",
+      "items": [
+        {
+          "name": "辣翅买一送一",
+          "quantity": 1
+        },
+        {
+          "name": "堡卷随心选3件套",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-31",
+      "time": "13:36",
+      "total": 38.2,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（沪闵路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-30",
+      "time": "18:18",
+      "total": 23.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "鱼酷活鱼烤鱼（徐家汇店）",
+      "items": [
+        {
+          "name": "活鱼烤鱼一人食-含米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-29",
+      "time": "18:18",
+      "total": 32.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小杨生煎（传媒港花园里店）",
+      "items": [
+        {
+          "name": "套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-28",
+      "time": "18:20",
+      "total": 30.2,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "快优选生活超市（徐汇店）",
+      "items": [
+        {
+          "name": "手工钢锯家用木工钢锯架重型钢锯架可调节钢锯架12寸锯弓／把",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-27",
+      "time": "19:53",
+      "total": 9.85,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-27",
+      "time": "18:21",
+      "total": 30.4,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "HARMAY話梅（上海武康路店）",
+      "items": [
+        {
+          "name": "CERAVE适乐肤 神经酰胺屏障修护润肤乳身体乳 30ml多规格旅行装小样试用装",
+          "quantity": 1
+        },
+        {
+          "name": "LA ROCHE-POSAY理肤泉B5多效保湿修护面膜25g/片 旅行装小样",
+          "quantity": 3
+        }
+      ],
+      "date": "2026-01-25",
+      "time": "09:45",
+      "total": 27.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "对酒当歌地道川菜（南丹东路店）",
+      "items": [
+        {
+          "name": "五常大米",
+          "quantity": 2
+        },
+        {
+          "name": "武林香辣鸭头",
+          "quantity": 1
+        },
+        {
+          "name": "豆花牛肉",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-24",
+      "time": "12:04",
+      "total": 127.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "鱼酷活鱼烤鱼（上海龙华会店）",
+      "items": [
+        {
+          "name": "活鱼烤鱼一人食-含米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-20",
+      "time": "18:19",
+      "total": 35.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宽的窄的面馆(茂名路店)",
+      "items": [
+        {
+          "name": "宜宾燃面",
+          "quantity": 1
+        },
+        {
+          "name": "牛肉燃面",
+          "quantity": 1
+        },
+        {
+          "name": "烫时令蔬菜",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-18",
+      "time": "13:11",
+      "total": 72.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "达美乐比萨（南丹路店）",
+      "items": [
+        {
+          "name": "马德里风情牛腩大虾比萨",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-17",
+      "time": "15:40",
+      "total": 75.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选/包含口味",
+          "quantity": 1
+        },
+        {
+          "name": "五常稻花香米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-16",
+      "time": "18:28",
+      "total": 35.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "鱼酷活鱼烤鱼（上海龙华会店）",
+      "items": [
+        {
+          "name": "活鱼烤鱼一人食-含米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-15",
+      "time": "18:23",
+      "total": 31.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "超级碗FOODBOWL(上海徐汇ITC一期店)",
+      "items": [
+        {
+          "name": "亚麻籽油烤虾超级碗套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-14",
+      "time": "18:32",
+      "total": 31.04,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "黔大吉贵州米粉·酸汤小火锅（漕溪北路店）",
+      "items": [
+        {
+          "name": "老贵阳辣鸡粉",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-13",
+      "time": "18:27",
+      "total": 25.55,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "泥糊破店江湖菜（徐汇店）",
+      "items": [
+        {
+          "name": "泰椒土豆丝",
+          "quantity": 1
+        },
+        {
+          "name": "楚留香碎碎鸡",
+          "quantity": 1
+        },
+        {
+          "name": "特价1元购红豆稀饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-10",
+      "time": "17:39",
+      "total": 57.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "皇不管夜包子(徐汇店)",
+      "items": [
+        {
+          "name": "鲜肉小笼包",
+          "quantity": 1
+        },
+        {
+          "name": "白米粥",
+          "quantity": 1
+        },
+        {
+          "name": "网红小笼包麻辣味",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-10",
+      "time": "08:46",
+      "total": 28.24,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "肥牛片",
+          "quantity": 1
+        },
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选",
+          "quantity": 1
+        },
+        {
+          "name": "奶白菜",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-09",
+      "time": "18:02",
+      "total": 58.34,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宽的窄的面馆",
+      "items": [
+        {
+          "name": "宜宾燃面",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-03",
+      "time": "17:07",
+      "total": 23.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（南洋1931店）",
+      "items": [
+        {
+          "name": "特价菜品3选1一份",
+          "quantity": 1
+        },
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选",
+          "quantity": 1
+        },
+        {
+          "name": "五常稻花香米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-03",
+      "time": "17:06",
+      "total": 40.13,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "阿食云南生烫牛肉米线（第B110档口美食城店）",
+      "items": [
+        {
+          "name": "炸肉酱拼60克吊龙米线",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-03",
+      "time": "11:08",
+      "total": 21.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "皇不管夜包子(徐汇店)",
+      "items": [
+        {
+          "name": "白米粥",
+          "quantity": 1
+        },
+        {
+          "name": "鲜肉小笼包",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-03",
+      "time": "09:05",
+      "total": 16.24,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "喜茶（上海飞洲国际店）",
+      "items": [
+        {
+          "name": "奇兰芭乐莲雾",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-02",
+      "time": "13:30",
+      "total": 21.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "泥糊破店江湖菜（徐汇店）",
+      "items": [
+        {
+          "name": "脆哨炒饭",
+          "quantity": 1
+        },
+        {
+          "name": "单人自选套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-01",
+      "time": "18:36",
+      "total": 55.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "黔大吉贵州米粉·酸汤小火锅（漕溪北路店）",
+      "items": [
+        {
+          "name": "老贵阳辣鸡粉",
+          "quantity": 1
+        },
+        {
+          "name": "加一个荷包蛋",
+          "quantity": 1
+        }
+      ],
+      "date": "2026-01-01",
+      "time": "12:20",
+      "total": 21.55,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "浆小白·肠粉·小笼包·豆浆夜市（交通大学店）",
+      "items": [
+        {
+          "name": "无矾大油条",
+          "quantity": 1
+        },
+        {
+          "name": "小白豆浆",
+          "quantity": 1
+        },
+        {
+          "name": "老板疯了！蔬菜鸡肉饼",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-31",
+      "time": "08:35",
+      "total": 10.95,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宽的窄的面馆",
+      "items": [
+        {
+          "name": "酸汤肥牛米粉",
+          "quantity": 1
+        },
+        {
+          "name": "宜宾燃面",
+          "quantity": 1
+        },
+        {
+          "name": "烫时令蔬菜",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-28",
+      "time": "18:14",
+      "total": 62.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "夺欢喜·贵州酸汤冒菜（百脑汇店）",
+      "items": [
+        {
+          "name": "手打鲜虾滑单人餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-27",
+      "time": "18:25",
+      "total": 35.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "鱼酷活鱼烤鱼（上海龙华会店）",
+      "items": [
+        {
+          "name": "活鱼烤鱼一人食-含米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-26",
+      "time": "19:05",
+      "total": 35.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小柴购超市（徐汇店）",
+      "items": [
+        {
+          "name": "伍德氏灯 UV紫光灯 USB充电式照猫藓猫癣灯防伪验钞玉石检测宠物真菌检测手电筒黑色/个",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-25",
+      "time": "17:41",
+      "total": 12.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "紫燕百味鸡（中山西店）",
+      "items": [
+        {
+          "name": "猪头肉+素菜+米饭",
+          "quantity": 1
+        },
+        {
+          "name": "酸汤肥牛+素菜+米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-24",
+      "time": "18:09",
+      "total": 47.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "乐川汇·豆花川菜（泰康路店）",
+      "items": [
+        {
+          "name": "玉米糁米饭",
+          "quantity": 2
+        },
+        {
+          "name": "泰椒土豆丝",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-21",
+      "time": "18:34",
+      "total": 71.15,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "小发达遵义羊肉粉（乐山路店）",
+      "items": [
+        {
+          "name": "贵州秘制泡菜和黄金豆双拼嗦粉灵魂伴侣",
+          "quantity": 1
+        },
+        {
+          "name": "招牌遵义羊肉粉👍",
+          "quantity": 1
+        },
+        {
+          "name": "黄金炸蛋",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-21",
+      "time": "12:01",
+      "total": 26.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "三米粥铺(徐汇店)",
+      "items": [
+        {
+          "name": "自选粥品+香辣肉夹馍",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-20",
+      "time": "19:31",
+      "total": 16.1,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "椒锅锅麻辣香锅（GATE M西岸凤巢店）",
+      "items": [
+        {
+          "name": "麻辣香辣",
+          "quantity": 1
+        },
+        {
+          "name": "方便面",
+          "quantity": 1
+        },
+        {
+          "name": "鲜滑嫩牛肉套餐+主食自选",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-20",
+      "time": "13:14",
+      "total": 34.64,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "哈妮宠物用品（徐汇店）",
+      "items": [
+        {
+          "name": "小型犬专用狗厕所防踩屎 易清理抽屉式狗厕所 狗狗厕所1个",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-20",
+      "time": "13:03",
+      "total": 56.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "皇不管夜包子(徐汇店)",
+      "items": [
+        {
+          "name": "鲜肉小笼包",
+          "quantity": 1
+        },
+        {
+          "name": "白米粥",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-20",
+      "time": "08:13",
+      "total": 16.24,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "快客达环球超市（静安店）",
+      "items": [
+        {
+          "name": "强力真空马桶吸盘 1个 马桶疏通器管道疏通器家用厕所泵下水道皮吸子",
+          "quantity": 1
+        },
+        {
+          "name": "马桶疏通器捅厕所下水道清洁棒堵塞神器高压吸家用管道一炮通工具 1/套",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-15",
+      "time": "19:38",
+      "total": 46.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "达美乐比萨（南丹路店）",
+      "items": [
+        {
+          "name": "金沙咸蛋黄嫩鸡比萨",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-14",
+      "time": "12:40",
+      "total": 62.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "鱼酷活鱼烤鱼（上海龙华会店）",
+      "items": [
+        {
+          "name": "活鱼烤鱼一人食-含米饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-13",
+      "time": "17:17",
+      "total": 35.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "高师傅招牌牛肉饭",
+      "items": [
+        {
+          "name": "招牌红烧牛腩任意双拼套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-13",
+      "time": "11:26",
+      "total": 21.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宽的窄的面馆(茂名路店)",
+      "items": [
+        {
+          "name": "烫时令蔬菜",
+          "quantity": 1
+        },
+        {
+          "name": "笋子牛肉米粉",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-09",
+      "time": "18:18",
+      "total": 41.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宽的窄的面馆(茂名路店)",
+      "items": [
+        {
+          "name": "宜宾燃面",
+          "quantity": 1
+        },
+        {
+          "name": "军屯锅盔",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-09",
+      "time": "18:17",
+      "total": 31.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "快活湖南粉馆（广元路店）",
+      "items": [
+        {
+          "name": "干锅麻辣牛肉拌粉",
+          "quantity": 1
+        },
+        {
+          "name": "香菜",
+          "quantity": 1
+        },
+        {
+          "name": "快活煎蛋",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-06",
+      "time": "12:27",
+      "total": 29.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "皇不管夜包子(徐汇店)",
+      "items": [
+        {
+          "name": "鲜肉小笼包",
+          "quantity": 1
+        },
+        {
+          "name": "小米南瓜粥",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-06",
+      "time": "08:05",
+      "total": 18.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（沪闵路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-12-05",
+      "time": "18:52",
+      "total": 22.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "紫燕百味鸡(枫林店)",
+      "items": [
+        {
+          "name": "秘制猪头肉拼肠套餐",
+          "quantity": 1
+        },
+        {
+          "name": "收藏点亮丨秘制香辣蘸料~仅限一份喔",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-11-30",
+      "time": "17:52",
+      "total": 21.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "皇不管夜包子(徐汇店)",
+      "items": [
+        {
+          "name": "白米粥",
+          "quantity": 1
+        },
+        {
+          "name": "鲜肉小笼包",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-11-29",
+      "time": "09:26",
+      "total": 17.33,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+      "items": [
+        {
+          "name": "六姐麻辣",
+          "quantity": 1
+        },
+        {
+          "name": "霸气嫩牛套餐",
+          "quantity": 1
+        },
+        {
+          "name": "正宗潮汕牛筋丸1颗",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-11-21",
+      "time": "10:56",
+      "total": 34.28,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "东池便当（沪闵路店）",
+      "items": [
+        {
+          "name": "椒麻鸡腿饭",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-11-20",
+      "time": "18:43",
+      "total": 23.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）",
+      "items": [
+        {
+          "name": "苕皮包里脊肉",
+          "quantity": 1
+        },
+        {
+          "name": "苕皮包肉沫",
+          "quantity": 1
+        },
+        {
+          "name": "软糯年糕",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-11-16",
+      "time": "17:56",
+      "total": 34.08,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "豪大大香鸡排（打浦桥美食城店)",
+      "items": [
+        {
+          "name": "豪大鸡排2人套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-11-16",
+      "time": "17:47",
+      "total": 25.55,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "紫燕百味鸡(枫林店)",
+      "items": [
+        {
+          "name": "夫妻肺片套餐",
+          "quantity": 1
+        }
+      ],
+      "date": "2025-11-15",
+      "time": "19:13",
+      "total": 25.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    }
+  ]
+}
