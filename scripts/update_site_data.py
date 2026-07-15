@@ -15,35 +15,35 @@ import hashlib
 import json
 import os
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SCRIPTS_DIR = ROOT / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
 PRIVATE_DIR = ROOT / ".private"
 PRIVATE_RAW = PRIVATE_DIR / "orders.raw.json"
 LEGACY_RAW = ROOT / "data" / "orders.json"
 PUBLIC_OUTPUT = ROOT / "web" / "public" / "data" / "orders.public.json"
 PRIVATE_LOCATION_MAP = PRIVATE_DIR / "location-map.json"
+PRIVATE_CLASSIFICATION_AUDIT = PRIVATE_DIR / "dish-classification.audit.json"
 
 LOCATIONS = {
     "home_xuhui": {
         "code": "home_xuhui",
         "label": "家（徐汇电影华苑）",
-        "shortLabel": "家 · 徐汇电影华苑",
+        "shortLabel": "家 · 电影华苑",
     },
     "office_xintiandi": {
         "code": "office_xintiandi",
         "label": "新天地（徕卡办公室）",
-        "shortLabel": "新天地 · 徕卡办公室",
+        "shortLabel": "新天地 · 徕卡",
     },
 }
-
-NON_FOOD_ITEM_PATTERN = re.compile(
-    r"餐具|包装袋|打包袋|纸巾|发票|验孕|试纸|感冒灵|口罩|手机防水袋",
-    re.IGNORECASE,
-)
 
 # 兼容商家常见的中英文括号混用，例如 `（半份5片)`。
 BRACKET_NOTE_PATTERN = re.compile(r"[【\[（(][^】\]）)]*[】\]）)]")
@@ -149,7 +149,7 @@ def sanitize_order(order: dict[str, Any], private_mapping: dict[str, str]) -> di
         if not isinstance(item, dict):
             continue
         raw_name = str(item.get("name") or "").strip()
-        if not raw_name or NON_FOOD_ITEM_PATTERN.search(raw_name):
+        if not raw_name:
             continue
         name = clean_dish_name(raw_name)
         if not name:
@@ -175,24 +175,62 @@ def sanitize_order(order: dict[str, Any], private_mapping: dict[str, str]) -> di
     }
 
 
-def build_public_payload(raw_orders: list[dict[str, Any]]) -> dict[str, Any]:
+def build_public_payload_with_audit(raw_orders: list[dict[str, Any]]) -> tuple[dict[str, Any], dict[str, Any]]:
+    from dish_intelligence import archive_orders
+
     private_mapping = load_private_location_map()
-    public_orders = [
+    sanitized_orders = [
         sanitized
         for order in raw_orders
         if isinstance(order, dict)
         for sanitized in [sanitize_order(order, private_mapping)]
         if sanitized is not None
     ]
+    public_orders, audit = archive_orders(sanitized_orders)
     public_orders.sort(key=lambda order: f"{order['date']} {order['time']}", reverse=True)
-    return {
-        "schemaVersion": 2,
+
+    dish_stats: dict[str, dict[str, Any]] = {}
+    for order in public_orders:
+        for item in order["items"]:
+            dish_id = hashlib.sha256(item["name"].encode("utf-8")).hexdigest()[:12]
+            item["dishId"] = dish_id
+            stats = dish_stats.setdefault(item["name"], {
+                "id": dish_id,
+                "name": item["name"],
+                "mealPeriod": item["mealPeriod"],
+                "orderCount": 0,
+                "restaurants": set(),
+            })
+            stats["orderCount"] += int(item.get("quantity") or 1)
+            stats["restaurants"].add(order["restaurant"])
+
+    dishes = [
+        {**{key: value for key, value in stats.items() if key != "restaurants"},
+         "restaurants": sorted(stats["restaurants"])}
+        for _, stats in sorted(dish_stats.items())
+    ]
+    payload = {
+        "schemaVersion": 4,
+        "classificationVersion": audit["classificationVersion"],
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "sourceOrderCount": len(raw_orders),
         "publishedOrderCount": len(public_orders),
+        "sourceItemCount": sum(len(order.get("items") or []) for order in sanitized_orders),
+        "publishedItemCount": sum(len(order["items"]) for order in public_orders),
+        "uniqueSourceItems": audit["uniqueSourceItems"],
+        "uniqueKeptSourceItems": audit["uniqueKeptSourceItems"],
+        "uniqueMealItems": audit["uniqueMealItems"],
+        "uniqueExcludedItems": audit["uniqueExcludedItems"],
         "locations": list(LOCATIONS.values()),
+        "dishes": dishes,
         "orders": public_orders,
     }
+    return payload, audit
+
+
+def build_public_payload(raw_orders: list[dict[str, Any]]) -> dict[str, Any]:
+    payload, _ = build_public_payload_with_audit(raw_orders)
+    return payload
 
 
 def assert_public_payload_is_safe(payload: dict[str, Any]) -> None:
@@ -239,12 +277,14 @@ def main() -> None:
         if not raw_orders:
             raise SystemExit("没有找到私有订单。请先运行 python3 scripts/update_site_data.py --scrape")
 
-    payload = build_public_payload(raw_orders)
+    payload, audit = build_public_payload_with_audit(raw_orders)
     assert_public_payload_is_safe(payload)
     atomic_write_json(PUBLIC_OUTPUT, payload)
+    atomic_write_json(PRIVATE_CLASSIFICATION_AUDIT, audit)
     excluded = payload["sourceOrderCount"] - payload["publishedOrderCount"]
-    print(f"公开数据已生成：{payload['publishedOrderCount']} 条，未识别地点排除 {excluded} 条")
+    print(f"公开数据已生成：{payload['publishedOrderCount']} 条，未发布 {excluded} 条（地点未识别或无独立主菜）")
     print(f"输出：{PUBLIC_OUTPUT}")
+    print(f"逐项分类审计：{PRIVATE_CLASSIFICATION_AUDIT}")
     print("下一步提交并推送 GitHub，Pages 会自动更新。")
 
 

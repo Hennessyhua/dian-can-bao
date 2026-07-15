@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
   color: #101616;
   background: #eaf6f1;
   font-synthesis: none;
@@ -12,9 +12,13 @@
   --muted: #73807d;
   --blue: #164bdc;
   --blue-dark: #0f3ebc;
+  --selected-green: #b8d6ca;
+  --selected-green-border: #91bbaa;
+  --selected-green-ink: #234c40;
   --coral: #ef6c5c;
   --line: #c8ddd5;
   --white: #ffffff;
+  --filter-card-height: 60px;
 }
 
 * {
@@ -27,6 +31,7 @@ body {
   min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   background: #dfeee8;
+  font-family: inherit;
 }
 
 .mobile-prototype {
@@ -37,7 +42,7 @@ body {
   overflow: hidden;
   position: relative;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   background: var(--mint-50);
   box-shadow: 0 0 0 1px rgba(16, 22, 22, 0.06);
 }
@@ -57,45 +62,28 @@ select {
 button:focus-visible,
 summary:focus-visible,
 select:focus-visible {
-  outline: 3px solid rgba(22, 75, 220, 0.35);
+  outline: 3px solid rgba(67, 141, 117, 0.32);
   outline-offset: 3px;
 }
 
 .app-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 24px 24px 18px;
+  padding: 15px 24px 12px;
   border-bottom: 1px solid var(--line);
   background: var(--mint-50);
 }
 
-.app-header h1,
-.location-section h2,
-.recommendation h3,
-.secondary-view > h2 {
-  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", ui-serif, serif;
-}
-
 .app-header h1 {
   margin: 0;
-  font-size: 34px;
-  line-height: 1;
-  letter-spacing: 0.02em;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .app-header p {
-  margin: 7px 0 0;
+  margin: 4px 0 0;
   color: var(--muted);
-  font-size: 14px;
-}
-
-.privacy-note {
-  margin-top: 4px;
-  color: var(--mint-600);
   font-size: 12px;
-  white-space: nowrap;
+  line-height: 1.35;
 }
 
 .app-content {
@@ -105,16 +93,64 @@ select:focus-visible {
 }
 
 .location-section {
-  padding: 20px 24px 18px;
+  padding: 14px 24px 16px;
   background: var(--mint-50);
 }
 
-.location-section h2,
+.filter-heading {
+  margin: 0 0 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
 .secondary-view > h2 {
   margin: 0 0 14px;
   font-size: clamp(34px, 9vw, 48px);
   line-height: 1.12;
   letter-spacing: -0.03em;
+}
+
+.meal-period-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.filter-card {
+  height: var(--filter-card-height);
+  min-height: var(--filter-card-height);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: #56615e;
+  background: rgba(255, 255, 255, 0.82);
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.meal-period-list .filter-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.filter-card:hover {
+  border-color: var(--selected-green-border);
+}
+
+.filter-card:active {
+  transform: scale(0.99);
+}
+
+.filter-card.is-selected {
+  border-color: var(--selected-green-border);
+  color: var(--selected-green-ink);
+  background: var(--selected-green);
 }
 
 .location-list {
@@ -125,32 +161,13 @@ select:focus-visible {
 
 .location-option {
   min-width: 0;
-  min-height: 68px;
   width: 100%;
   display: flex;
   align-items: center;
   gap: 9px;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.74);
+  padding: 8px 9px;
   text-align: left;
   cursor: pointer;
-  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
-}
-
-.location-option:hover {
-  border-color: var(--mint-600);
-}
-
-.location-option:active {
-  transform: scale(0.99);
-}
-
-.location-option.is-selected {
-  border-color: var(--mint-600);
-  background: var(--white);
 }
 
 .location-icon {
@@ -187,25 +204,34 @@ select:focus-visible {
   line-height: 1.25;
 }
 
+.location-option.is-selected small {
+  color: rgba(35, 76, 64, 0.72);
+}
+
+.location-option.is-selected .location-icon {
+  color: var(--selected-green-ink);
+  background: rgba(255, 255, 255, 0.68);
+}
+
 .recommendation {
-  padding: 26px 24px 24px;
+  padding: 21px 24px 20px;
   background: var(--white);
   border-top: 1px solid rgba(16, 22, 22, 0.04);
 }
 
 .eyebrow {
   width: fit-content;
-  margin: 0 0 24px;
+  margin: 0 0 18px;
   padding-bottom: 5px;
   border-bottom: 2px solid var(--mint-600);
   color: var(--mint-600);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
 
 .recommendation-live {
-  min-height: 206px;
+  min-height: 168px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,7 +240,7 @@ select:focus-visible {
 .recommendation h3 {
   max-width: 100%;
   margin: 0;
-  font-size: clamp(46px, 15vw, 72px);
+  font-size: clamp(38px, 11vw, 56px);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.045em;
@@ -222,15 +248,15 @@ select:focus-visible {
 }
 
 .title-rule {
-  width: 92px;
+  width: 76px;
   height: 2px;
-  margin: 19px 0 16px;
+  margin: 15px 0 13px;
   background: var(--ink);
 }
 
 .restaurant-name {
   margin: 0;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 650;
   line-height: 1.5;
 }
@@ -238,7 +264,7 @@ select:focus-visible {
 .last-ordered {
   margin: 6px 0 0;
   color: var(--coral);
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .state-message {
@@ -250,15 +276,12 @@ select:focus-visible {
 
 .state-message strong {
   color: var(--ink);
-  font-family: "Songti SC", "STSong", ui-serif, serif;
   font-size: 26px;
 }
 
 .action-row {
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
-  gap: 12px;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .action-row.single-action {
@@ -266,7 +289,7 @@ select:focus-visible {
 }
 
 .button {
-  min-height: 56px;
+  min-height: 52px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -302,25 +325,8 @@ select:focus-visible {
   background: var(--mint-100);
 }
 
-.button-primary {
-  border: 1px solid var(--blue);
-  color: var(--white);
-  background: var(--blue);
-}
-
-.button-primary:hover {
-  background: var(--blue-dark);
-}
-
-.confirmation {
-  margin: 14px 0 0;
-  color: var(--mint-600);
-  font-size: 14px;
-  text-align: center;
-}
-
 .more-filters {
-  padding: 18px 24px 28px;
+  padding: 14px 24px 22px;
   background: var(--white);
 }
 
@@ -427,7 +433,6 @@ select:focus-visible {
 }
 
 .stat-summary strong {
-  font-family: "Songti SC", "STSong", ui-serif, serif;
   font-size: 28px;
 }
 
@@ -440,8 +445,7 @@ select:focus-visible {
   margin-top: 28px;
 }
 
-.ranking h3,
-.decision-log h3 {
+.ranking h3 {
   margin: 0 0 12px;
   font-size: 16px;
 }
@@ -478,30 +482,6 @@ select:focus-visible {
   color: var(--muted);
   font-size: 12px;
   white-space: nowrap;
-}
-
-.decision-log {
-  margin-bottom: 28px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--mint-50);
-}
-
-.decision-log article {
-  display: grid;
-  gap: 4px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.decision-log article:last-child {
-  border-bottom: 0;
-}
-
-.decision-log span {
-  color: var(--muted);
-  font-size: 12px;
 }
 
 .history-list article {
@@ -560,20 +540,8 @@ select:focus-visible {
     padding-inline: 18px;
   }
 
-  .privacy-note {
-    display: none;
-  }
-
-  .location-section h2 {
-    font-size: 34px;
-  }
-
   .recommendation h3 {
-    font-size: 46px;
-  }
-
-  .action-row {
-    grid-template-columns: 1fr;
+    font-size: 38px;
   }
 
   .filter-fields {

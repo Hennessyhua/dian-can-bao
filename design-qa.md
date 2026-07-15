@@ -1,68 +1,32 @@
 # Design QA
 
-- Source visual truth: selected concept 3 from the design exploration
-- Implementation screenshot: local QA asset `design-qa-assets/implementation-home-390x844.png` (not published)
-- Combined comparison: local QA asset `design-qa-assets/source-vs-implementation.png` (not published)
-- Annotation before/after comparison: local QA asset `design-qa-assets/annotation-before-after.png` (not published)
-- Viewport: `390 × 844`
-- State: home location selected, real sanitized recommendation loaded
+- Source visual truth: the four browser annotations supplied on 2026-07-15 for the live local page at `http://localhost:4173/`
+- Target viewport shown by the annotations: `1144 × 994`, with the mobile app surface approximately `420 × 900`
+- Target state: lunch and home selected with a real recommendation
+- Automated implementation capture: blocked because the approved browser connection fails during initialization with `Cannot redefine property: process`
 
-## Full-view comparison evidence
+## Implemented annotation changes
 
-The combined comparison shows the same pale-mint and white page structure, editorial serif headlines, green location treatment, coral date metadata, cobalt primary action, black secondary action, and three-item bottom navigation. The implementation intentionally removes the mock's non-functional menu and its duplicate large random button. Per the user's selected refinement, one random control remains and changes from `帮我选一个` to `换一个` after a result exists.
+- Compact location filter labels are now `家 · 电影华苑` and `新天地 · 徕卡`.
+- Meal-period and location controls share the same `.filter-card` implementation with an exact 60px height and 12px radius.
+- Selected filters use a low-saturation mint-green fill (`#b8d6ca`), green border, dark-green text, and matching green focus ring.
+- Clicking an already selected meal-period or location card clears that dimension to `all`; no card remains highlighted while cleared.
+- Clearing both dimensions produces candidates across all meal periods and all locations.
+- Radio semantics were replaced by toggle-button semantics (`aria-pressed`) to represent the clearable state accurately.
+- The entire page now inherits one Songti-style font stack; all component-level font-family overrides were removed.
 
-## Focused region comparison evidence
+## Automated evidence
 
-A separate crop was not needed because the combined 804 × 892 comparison keeps the header, both location controls, recommendation typography, actions, and bottom navigation readable. DOM checks separately verified control names, selected state, tab content, and the single-random-control constraint.
+- Python data pipeline: 9 tests passed.
+- Frontend recommendation and filter logic: 4 tests passed, including active-filter cancellation and all-period/all-location candidate coverage.
+- Vite production build passed.
+- Generated and served location data contains the two compact labels.
+- Served CSS contains one font-family declaration, the shared 60px card token, and the new mint-green selected token.
+- Served React source contains both `aria-pressed` toggle states.
+- `git diff --check` passed.
 
-## Required fidelity surfaces
+## Remaining visual QA blocker
 
-- Fonts and typography: Songti-style display typography and sans-serif control text reproduce the source hierarchy. Long real dish names wrap without clipping.
-- Spacing and layout rhythm: header, location block, recommendation surface, actions, and bottom navigation preserve the source proportions at 390 × 844 with no horizontal overflow.
-- Colors and visual tokens: pale mint, white, ink black, muted green, coral, and cobalt map closely to the source.
-- Image quality and asset fidelity: the selected concept has no required raster imagery. Standard UI icons use Phosphor Icons; no emoji, custom SVG, or placeholder art is used.
-- Copy and content: location labels, recommendation metadata, `换一个`, `就吃这个`, statistics, and history copy match the approved product decisions. Raw addresses never appear.
+Code, data, interaction logic, tests, production build, and served resources are verified. The current rendered page could not be captured through the required browser connection, so same-viewport visual comparison, click-through verification, overflow inspection, and console inspection remain blocked. The implementation must not be treated as visually signed off until a current browser capture is available.
 
-## Interaction verification
-
-- Page content and both location labels rendered.
-- Exactly one random control rendered.
-- Random action changed the recommendation.
-- `就吃这个` recorded a decision and displayed confirmation.
-- Office location displayed the correct no-data state.
-- More-filter controls rendered with accessible names.
-- Statistics and history tabs opened successfully.
-- No Vite error overlay or captured console error.
-- Viewport was 390 × 844 with a 390px document width and no horizontal overflow.
-
-## Comparison history
-
-### Iteration 1
-
-- Earlier P0 finding: a non-food accessory (`一次性餐具`) could be selected as a meal.
-- Fix: the public-data sanitizer now removes tableware, packaging, medicine, test-kit, and similar non-food entries; orders with no remaining food items are excluded.
-- Post-fix evidence: the public dataset contains 156 recommendable orders, the unit test passes, and the final browser screenshot shows a food recommendation.
-
-### Iteration 2
-
-- Earlier P2 evidence issue: one post-interaction Chrome capture contained compositor artifacts.
-- Fix: the verification flow now reloads into a stable home state before the final capture.
-- Post-fix evidence: the final implementation screenshot and combined comparison render cleanly.
-
-### Iteration 3 — browser annotations
-
-- Earlier P2 density issue: the two location options were stacked and occupied too much of the first viewport.
-- Fix: the location radiogroup now uses two equal-width columns, compact icons, tighter padding, and a shorter section rhythm while preserving the full labels, order counts, selected state, and 44px+ touch targets.
-- Earlier P1 content issue: raw dish names could expose marketing prefixes and operational notes, for example `【销量TOP】霸气嫩牛套餐（菜品不支持更换/包含米饭x1）`.
-- Fix: the public-data generator removes bracketed marketing labels, bracketed specifications, leading decoration, and common marketing prefixes before data reaches recommendations, history, or statistics. Private raw orders remain unchanged.
-- Post-fix evidence: `annotation-before-after.png` shows the compact two-column location layout and a clean recommendation name. The target example now publishes as `霸气嫩牛套餐`; five data tests pass.
-
-## Findings
-
-No actionable P0, P1, or P2 mismatch remains after the annotation update.
-
-## Follow-up polish
-
-- P3: `更多筛选` sits just below the first viewport for some long real dish names. This preserves the primary location and decision actions above the fold and is acceptable for the simplified product direction.
-
-final result: passed
+final result: blocked

@@ -1,30 +1,44 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   ChartBar,
-  Check,
   ClockCounterClockwise,
   House,
   MapPin,
   Shuffle,
   SlidersHorizontal,
 } from "@phosphor-icons/react";
+import { buildCandidates, chooseRandom, toggleFilter } from "./recommendations.js";
 
 const DEFAULT_LOCATIONS = [
-  { code: "home_xuhui", label: "家（徐汇电影华苑）", shortLabel: "家 · 徐汇电影华苑" },
-  { code: "office_xintiandi", label: "新天地（徕卡办公室）", shortLabel: "新天地 · 徕卡办公室" },
+  { code: "home_xuhui", label: "家（徐汇电影华苑）", shortLabel: "家 · 电影华苑" },
+  { code: "office_xintiandi", label: "新天地（徕卡办公室）", shortLabel: "新天地 · 徕卡" },
 ];
 
 const STORAGE_KEYS = {
   location: "dian-can-bao.location",
-  decisions: "dian-can-bao.decisions",
+  mealPeriod: "dian-can-bao.meal-period",
 };
 
-function readStoredDecisions() {
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEYS.decisions) || "[]");
-  } catch {
-    return [];
-  }
+const MEAL_PERIODS = [
+  { id: "breakfast", label: "早饭" },
+  { id: "lunch", label: "午饭" },
+  { id: "dinner", label: "晚饭" },
+];
+
+function defaultMealPeriod() {
+  const stored = localStorage.getItem(STORAGE_KEYS.mealPeriod);
+  if (stored === "all" || MEAL_PERIODS.some((period) => period.id === stored)) return stored;
+  const hour = new Date().getHours();
+  if (hour < 10) return "breakfast";
+  if (hour < 15) return "lunch";
+  return "dinner";
+}
+
+function defaultLocation() {
+  const stored = localStorage.getItem(STORAGE_KEYS.location);
+  return ["all", ...DEFAULT_LOCATIONS.map((location) => location.code)].includes(stored)
+    ? stored
+    : "home_xuhui";
 }
 
 function formatDate(value) {
@@ -42,52 +56,39 @@ function formatMoney(value) {
   }).format(Number(value || 0));
 }
 
-function candidateKey(candidate) {
-  return candidate ? `${candidate.restaurant}::${candidate.name}::${candidate.date}` : "";
-}
-
-function chooseRandom(candidates, current) {
-  if (!candidates.length) return null;
-  if (candidates.length === 1) return candidates[0];
-  const alternatives = candidates.filter((item) => candidateKey(item) !== candidateKey(current));
-  return alternatives[Math.floor(Math.random() * alternatives.length)];
-}
-
-function buildCandidates(orders, locationCode, restaurant, months) {
-  const cutoff = months === "all" ? null : new Date();
-  if (cutoff) cutoff.setMonth(cutoff.getMonth() - Number(months));
-
-  return orders
-    .filter((order) => order.locationCode === locationCode)
-    .filter((order) => restaurant === "all" || order.restaurant === restaurant)
-    .filter((order) => !cutoff || new Date(`${order.date}T00:00:00`) >= cutoff)
-    .flatMap((order) =>
-      order.items.map((item) => ({
-        name: item.name,
-        quantity: item.quantity,
-        restaurant: order.restaurant,
-        date: order.date,
-        total: order.total,
-        locationCode: order.locationCode,
-        locationLabel: order.locationLabel,
-      })),
-    );
-}
-
-function LocationSelector({ locations, selected, onSelect, orderCounts }) {
+function MealPeriodSelector({ selected, onSelect }) {
   return (
-    <section className="location-section" aria-labelledby="location-heading">
-      <h2 id="location-heading">今天在哪里吃？</h2>
-      <div className="location-list" role="radiogroup" aria-label="用餐地点">
+    <div className="meal-period-list" role="group" aria-label="用餐时段，可再次点击取消筛选">
+      {MEAL_PERIODS.map((period) => (
+        <button
+          key={period.id}
+          type="button"
+          aria-pressed={selected === period.id}
+          className={`filter-card${selected === period.id ? " is-selected" : ""}`}
+          onClick={() => onSelect(period.id)}
+        >
+          {period.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function LocationSelector({ locations, selected, onSelect, orderCounts, mealPeriod, onMealPeriod }) {
+  return (
+    <section className="location-section" aria-label="推荐条件">
+      <h2 className="filter-heading">啥时候吃呀？</h2>
+      <MealPeriodSelector selected={mealPeriod} onSelect={onMealPeriod} />
+      <h2 className="filter-heading">在哪吃饭呀？</h2>
+      <div className="location-list" role="group" aria-label="用餐地点，可再次点击取消筛选">
         {locations.map((location) => {
           const isSelected = selected === location.code;
           return (
             <button
               key={location.code}
               type="button"
-              className={`location-option${isSelected ? " is-selected" : ""}`}
-              role="radio"
-              aria-checked={isSelected}
+              className={`filter-card location-option${isSelected ? " is-selected" : ""}`}
+              aria-pressed={isSelected}
               onClick={() => onSelect(location.code)}
             >
               <span className="location-icon" aria-hidden="true"><MapPin weight={isSelected ? "fill" : "regular"} /></span>
@@ -103,7 +104,7 @@ function LocationSelector({ locations, selected, onSelect, orderCounts }) {
   );
 }
 
-function Recommendation({ result, loading, onRandom, onConfirm, statusMessage }) {
+function Recommendation({ result, loading, onRandom }) {
   return (
     <section className="recommendation" aria-labelledby="recommendation-heading" aria-busy={loading}>
       <p className="eyebrow" id="recommendation-heading">为你推荐</p>
@@ -125,19 +126,17 @@ function Recommendation({ result, loading, onRandom, onConfirm, statusMessage })
         )}
       </div>
 
-      <div className={`action-row${result ? "" : " single-action"}`}>
-        <button type="button" className="button button-secondary" onClick={onRandom} disabled={loading}>
+      <div className="action-row single-action">
+        <button
+          type="button"
+          className="button button-secondary"
+          onClick={onRandom}
+          disabled={loading || !result}
+        >
           <Shuffle aria-hidden="true" />
-          {result ? "换一个" : "帮我选一个"}
+          换一个
         </button>
-        {result && (
-          <button type="button" className="button button-primary" onClick={onConfirm}>
-            <Check aria-hidden="true" />
-            就吃这个
-          </button>
-        )}
       </div>
-      {statusMessage && <p className="confirmation" role="status">{statusMessage}</p>}
     </section>
   );
 }
@@ -203,22 +202,11 @@ function StatsView({ orders }) {
   );
 }
 
-function HistoryView({ orders, decisions }) {
+function HistoryView({ orders }) {
   return (
     <section className="secondary-view" aria-labelledby="history-heading">
       <p className="eyebrow">最近吃过</p>
       <h2 id="history-heading">不用靠记忆。</h2>
-      {decisions.length > 0 && (
-        <section className="decision-log">
-          <h3>已决定</h3>
-          {decisions.slice(0, 5).map((decision) => (
-            <article key={decision.id}>
-              <strong>{decision.name}</strong>
-              <span>{decision.restaurant} · {decision.locationLabel}</span>
-            </article>
-          ))}
-        </section>
-      )}
       <div className="history-list">
         {orders.slice(0, 30).map((order, index) => (
           <article key={`${order.date}-${order.restaurant}-${index}`}>
@@ -255,12 +243,11 @@ export function App() {
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
   const [activeTab, setActiveTab] = useState("home");
-  const [selectedLocation, setSelectedLocation] = useState(() => localStorage.getItem(STORAGE_KEYS.location) || "home_xuhui");
+  const [selectedLocation, setSelectedLocation] = useState(defaultLocation);
+  const [mealPeriod, setMealPeriod] = useState(defaultMealPeriod);
   const [restaurant, setRestaurant] = useState("all");
   const [months, setMonths] = useState("all");
   const [result, setResult] = useState(null);
-  const [statusMessage, setStatusMessage] = useState("");
-  const [decisions, setDecisions] = useState(readStoredDecisions);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -285,33 +272,36 @@ export function App() {
     return () => controller.abort();
   }, []);
 
-  const restaurants = useMemo(() => [...new Set(dataset.orders.filter((order) => order.locationCode === selectedLocation).map((order) => order.restaurant))].sort((a, b) => a.localeCompare(b, "zh-CN")), [dataset.orders, selectedLocation]);
-  const candidates = useMemo(() => buildCandidates(dataset.orders, selectedLocation, restaurant, months), [dataset.orders, selectedLocation, restaurant, months]);
-  const orderCounts = useMemo(() => dataset.orders.reduce((counts, order) => ({ ...counts, [order.locationCode]: (counts[order.locationCode] || 0) + 1 }), {}), [dataset.orders]);
+  const restaurants = useMemo(() => [...new Set(dataset.orders
+    .filter((order) => selectedLocation === "all" || order.locationCode === selectedLocation)
+    .filter((order) => mealPeriod === "all" || order.items.some((item) => item.mealPeriod === mealPeriod))
+    .map((order) => order.restaurant))].sort((a, b) => a.localeCompare(b, "zh-CN")), [dataset.orders, selectedLocation, mealPeriod]);
+  const candidates = useMemo(() => buildCandidates(dataset.orders, selectedLocation, mealPeriod, restaurant, months), [dataset.orders, selectedLocation, mealPeriod, restaurant, months]);
+  const orderCounts = useMemo(() => dataset.orders.reduce((counts, order) => {
+    if (mealPeriod !== "all" && !order.items.some((item) => item.mealPeriod === mealPeriod)) return counts;
+    return { ...counts, [order.locationCode]: (counts[order.locationCode] || 0) + 1 };
+  }, {}), [dataset.orders, mealPeriod]);
 
   useEffect(() => {
     if (!loading) setResult(chooseRandom(candidates, null));
-  }, [loading, selectedLocation, restaurant, months, candidates]);
+  }, [loading, selectedLocation, mealPeriod, restaurant, months, candidates]);
 
   function handleLocation(code) {
-    setSelectedLocation(code);
+    const next = toggleFilter(selectedLocation, code);
+    setSelectedLocation(next);
     setRestaurant("all");
-    setStatusMessage("");
-    localStorage.setItem(STORAGE_KEYS.location, code);
+    localStorage.setItem(STORAGE_KEYS.location, next);
+  }
+
+  function handleMealPeriod(period) {
+    const next = toggleFilter(mealPeriod, period);
+    setMealPeriod(next);
+    setRestaurant("all");
+    localStorage.setItem(STORAGE_KEYS.mealPeriod, next);
   }
 
   function handleRandom() {
     setResult((current) => chooseRandom(candidates, current));
-    setStatusMessage("");
-  }
-
-  function handleConfirm() {
-    if (!result) return;
-    const decision = { ...result, id: crypto.randomUUID(), decidedAt: new Date().toISOString() };
-    const next = [decision, ...decisions].slice(0, 100);
-    setDecisions(next);
-    localStorage.setItem(STORAGE_KEYS.decisions, JSON.stringify(next));
-    setStatusMessage(`已记下：今天吃${result.name}`);
   }
 
   const locations = dataset.locations.map((location) => ({
@@ -321,22 +311,21 @@ export function App() {
 
   return (
     <div className="mobile-prototype">
-      <header className="app-header">
-        <div><h1>点餐宝</h1><p>30秒帮你决定吃什么</p></div>
-        <span className="privacy-note">仅展示地点标签</span>
-      </header>
-
       <main className="app-content">
+        <header className="app-header">
+          <h1>今天吃什么？</h1>
+          <p>点中哪个吃哪个</p>
+        </header>
         {loadError ? <div className="error-banner" role="alert">{loadError}</div> : null}
         {activeTab === "home" && (
           <>
-            <LocationSelector locations={locations} selected={selectedLocation} onSelect={handleLocation} orderCounts={orderCounts} />
-            <Recommendation result={result} loading={loading} onRandom={handleRandom} onConfirm={handleConfirm} statusMessage={statusMessage} />
+            <LocationSelector locations={locations} selected={selectedLocation} onSelect={handleLocation} orderCounts={orderCounts} mealPeriod={mealPeriod} onMealPeriod={handleMealPeriod} />
+            <Recommendation result={result} loading={loading} onRandom={handleRandom} />
             <MoreFilters restaurants={restaurants} restaurant={restaurant} months={months} onRestaurant={setRestaurant} onMonths={setMonths} />
           </>
         )}
         {activeTab === "stats" && <StatsView orders={dataset.orders} />}
-        {activeTab === "history" && <HistoryView orders={dataset.orders} decisions={decisions} />}
+        {activeTab === "history" && <HistoryView orders={dataset.orders} />}
       </main>
 
       <BottomNav active={activeTab} onChange={setActiveTab} />

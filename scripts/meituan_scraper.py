@@ -8,7 +8,8 @@
 使用方法：
   1. 确保 Chrome 已用你的美团账号登录过（Cookie 持久化）
   2. 运行本脚本：python3 meituan_scraper.py
-  3. 数据输出到 ../data/orders.json
+  3. 私有原始数据写入 ../.private/orders.raw.json
+  4. 自动执行主菜归档、餐段推理、脱敏并刷新网页数据
 
 依赖：Python 3.8+, websocket-client, Chrome 浏览器
 安装：pip install websocket-client
@@ -20,13 +21,16 @@ import subprocess
 import websocket
 import os
 import urllib.request
+import urllib.parse
 
 # 配置
 CDP_PORT = 9223
 USER_DATA_DIR = os.path.expanduser("~/Library/Caches/cookie-cdp-chrome")
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+PRIVATE_OUTPUT = os.path.join(ROOT_DIR, '.private', 'orders.raw.json')
 ORDER_LIST_API = "https://i.waimai.meituan.com/openh5/order/list"
 ORDER_DETAIL_API = "https://i.waimai.meituan.com/openh5/order/detail"
+ORDER_PAGE_URL = "https://h5.waimai.meituan.com/waimai/mindex/olist"
 
 # ============================================================
 # 第1步：启动 Chrome（如有头模式可看到浏览器窗口）
@@ -43,11 +47,22 @@ def start_chrome():
         "--remote-allow-origins=*",
         "--lang=zh-CN",
         "--window-size=430,932",
-        "https://h5.waimai.meituan.com/waimai/mindex/olist"
+        ORDER_PAGE_URL
     ]
     subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     print("🚀 Chrome 启动中...")
     time.sleep(5)
+
+
+def open_meituan_tab():
+    """在已运行的调试 Chrome 中显式创建美团订单页，避免误连恢复出的其他网站。"""
+    encoded = urllib.parse.quote(ORDER_PAGE_URL, safe="")
+    request = urllib.request.Request(
+        f"http://127.0.0.1:{CDP_PORT}/json/new?{encoded}",
+        method="PUT",
+    )
+    with urllib.request.urlopen(request, timeout=5) as response:
+        return json.load(response)
 
 # ============================================================
 # 第2步：连接 CDP 并获取订单数据
@@ -56,14 +71,17 @@ def get_tab():
     """等待订单页就绪，并返回对应标签页的 CDP 地址。"""
     deadline = time.time() + 30
     last_error = None
+    opened = False
     while time.time() < deadline:
         try:
             with urllib.request.urlopen(f'http://127.0.0.1:{CDP_PORT}/json/list', timeout=2) as response:
                 tabs = json.load(response)
             matching = [tab for tab in tabs if 'h5.waimai.meituan.com' in tab.get('url', '')]
-            candidates = matching or tabs
-            if candidates and candidates[0].get('webSocketDebuggerUrl'):
-                return candidates[0]['webSocketDebuggerUrl']
+            if matching and matching[0].get('webSocketDebuggerUrl'):
+                return matching[0]['webSocketDebuggerUrl']
+            if not opened:
+                open_meituan_tab()
+                opened = True
         except Exception as error:
             last_error = error
         time.sleep(1)
@@ -89,6 +107,8 @@ def fetch_all_orders(ws_url):
     all_ids = []
     cursor = None
     page = 1
+    access_deadline = time.time() + 180
+    access_notice_shown = False
     
     print("📦 正在获取订单列表...")
     
@@ -108,7 +128,17 @@ def fetch_all_orders(ws_url):
                     headers: {{"Accept":"application/json","Content-Type":"application/x-www-form-urlencoded"}},
                     body: "{body}"
                 }});
-                const data = await resp.json();
+                const text = await resp.text();
+                let data = null;
+                try {{ data = JSON.parse(text); }} catch (error) {{}}
+                if (!resp.ok || !data?.data?.orderList) {{
+                    return JSON.stringify({{
+                        error: "ORDER_LIST_UNAVAILABLE",
+                        httpStatus: resp.status,
+                        code: data?.code ?? null,
+                        message: data?.msg || data?.message || ""
+                    }});
+                }}
                 return JSON.stringify({{
                     cursor: data.data.cursor,
                     isEnd: data.data.isEnd,
@@ -120,7 +150,23 @@ def fetch_all_orders(ws_url):
             'returnByValue': True
         })
         
-        result = json.loads(r['result']['result']['value'])
+        runtime_result = r.get('result', {}).get('result', {})
+        if runtime_result.get('type') != 'string':
+            description = runtime_result.get('description') or runtime_result.get('value') or runtime_result
+            raise RuntimeError(f"美团订单接口未返回订单数据，请确认订单页已登录并刷新后重试: {description}")
+        result = json.loads(runtime_result['value'])
+        if result.get('error'):
+            if page == 1 and time.time() < access_deadline:
+                if not access_notice_shown:
+                    print("🔐 美团订单接口尚未授权，请在 Chrome 中完成登录或验证；脚本将在 3 分钟内自动重试...")
+                    access_notice_shown = True
+                time.sleep(5)
+                continue
+            raise RuntimeError(
+                "美团订单列表暂不可用"
+                f"（HTTP {result.get('httpStatus')}，code={result.get('code')}）。"
+                "请在刚打开的 Chrome 美团订单页完成登录或验证，刷新页面后重新运行。"
+            )
         new_ids = result.get('orderIds', [])
         
         if not new_ids:
@@ -228,10 +274,26 @@ def save_orders(orders, output_path):
 
 def main():
     orders = scrape_orders()
-    output_path = os.path.join(OUTPUT_DIR, 'orders.json')
-    save_orders(orders, output_path)
-    print(f"\n📁 私有原始数据已保存至: {output_path}")
-    print(f"📊 统计: {len(orders)} 条订单（未输出地址详情）")
+    save_orders(orders, PRIVATE_OUTPUT)
+
+    # 直接运行提取脚本时也必须走与一键更新相同的归档链路，避免原始明细直出网页。
+    from update_site_data import (
+        PRIVATE_CLASSIFICATION_AUDIT,
+        PUBLIC_OUTPUT,
+        assert_public_payload_is_safe,
+        atomic_write_json,
+        build_public_payload_with_audit,
+    )
+
+    payload, audit = build_public_payload_with_audit(orders)
+    assert_public_payload_is_safe(payload)
+    atomic_write_json(PUBLIC_OUTPUT, payload)
+    atomic_write_json(PRIVATE_CLASSIFICATION_AUDIT, audit)
+
+    print(f"\n📁 私有原始数据已保存至: {PRIVATE_OUTPUT}")
+    print(f"📊 原始订单: {len(orders)} 条；可推荐订单: {payload['publishedOrderCount']} 条")
+    print(f"🍽️ 独立菜品: {payload['uniqueMealItems']} 道；排除附属/非餐饮: {payload['uniqueExcludedItems']} 项")
+    print(f"🌐 脱敏网页数据已刷新: {PUBLIC_OUTPUT}")
 
 if __name__ == '__main__':
     main()

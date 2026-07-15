@@ -15,12 +15,13 @@
 
 ## 功能
 
-- 🎲 **随机选餐**：完全随机，交给命运
+- 🎲 **随机选餐**：从归档后的独立主菜中随机，交给命运
+- 🕐 **餐段筛选**：按历史下单时间与菜品语义推理早饭 / 午饭 / 晚饭
 - 📍 **按地点筛选**：家 / 新天地
 - 🏷️ **更多筛选**：菜系、餐厅、最近点过
 - 📊 **数据看板**：最常吃的店、最爱的菜、月度账单
 - 🔒 **地址别名**：本地更新脚本将收件地址映射为地点标签，公开网页不接触具体地址
-- 📱 **简洁前端**：移动端优先，核心流程只保留“选地点 → 帮我选 → 就吃这个”
+- 📱 **简洁前端**：移动端优先，核心流程只保留“选餐段 → 选地点 → 换一个”
 - 🌐 **GitHub Pages**：静态部署，不需要云服务器
 
 ## 项目结构
@@ -34,6 +35,8 @@
 ├── scripts/
 │   └── meituan_scraper.py   # 美团订单爬取脚本
 │   └── update_site_data.py  # 采集、地点映射、脱敏与公开数据生成
+│   └── dish_intelligence.py # 主菜归档、上下文推理与餐段分类
+│   └── hermes_update_data.sh# Hermes 一键更新、验证与构建入口
 ├── web/                     # React + Vite 静态网页
 │   ├── src/
 │   └── public/data/         # 可公开的脱敏订单
@@ -59,13 +62,22 @@ cd <点餐宝项目目录>
 python3 scripts/update_site_data.py --scrape
 ```
 
-该命令会：打开美团登录页、采集订单、将原始数据保存在 `.private/`、把地址映射为地点标签、清除菜名中的营销前缀和括号说明，并生成 `web/public/data/orders.public.json`。提交并推送这一公开文件后，GitHub Pages 会自动更新。
+该命令会：打开美团登录页、采集订单、将原始数据保存在 `.private/`、把地址映射为地点标签、清除菜名营销内容、逐项归档独立主菜、推理早午晚餐段，并生成 `web/public/data/orders.public.json`。逐项审计结果保存在 `.private/dish-classification.audit.json`。提交并推送公开文件后，GitHub Pages 会自动更新。
 
 只想根据本机已有订单重新生成网页数据时：
 
 ```bash
 python3 scripts/update_site_data.py
 ```
+
+Hermes 读取仓库后应先查看 `HERMES.md`，并使用统一入口：
+
+```bash
+./scripts/hermes_update_data.sh --scrape  # 抓取新订单并清洗
+./scripts/hermes_update_data.sh           # 仅重新清洗本机数据
+```
+
+该入口还会完成同菜去重、单元测试、Python 编译检查和前端生产构建；任一步失败都会停止。
 
 ## 本地预览
 

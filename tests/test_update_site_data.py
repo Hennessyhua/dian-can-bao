@@ -49,11 +49,94 @@ class PublicDataTests(unittest.TestCase):
                 {"name": "嫩牛肉冒菜", "quantity": 1},
             ],
             "date": "2026-07-14",
+            "time": "12:00",
             "total": 30,
             "address": "电影华苑",
         }]
         payload = MODULE.build_public_payload(raw)
-        self.assertEqual(payload["orders"][0]["items"], [{"name": "嫩牛肉冒菜", "quantity": 1}])
+        items = payload["orders"][0]["items"]
+        self.assertEqual([item["name"] for item in items], ["嫩牛肉冒菜"])
+        self.assertEqual(items[0]["mealPeriod"], "lunch")
+        self.assertTrue(items[0]["dishId"])
+
+    def test_rice_flavor_and_non_food_are_removed_at_order_level(self):
+        raw = [{
+            "restaurant": "成都你六姐·牛肉冒菜",
+            "items": [
+                {"name": "【销量TOP】霸气嫩牛套餐（包含米饭x1）", "quantity": 1},
+                {"name": "六姐麻辣", "quantity": 1},
+                {"name": "五常稻花香米饭", "quantity": 1},
+                {"name": "需要餐具", "quantity": 1},
+            ],
+            "date": "2026-07-14",
+            "time": "18:30",
+            "total": 40,
+            "address": "电影华苑",
+        }]
+        payload, audit = MODULE.build_public_payload_with_audit(raw)
+        self.assertEqual([item["name"] for item in payload["orders"][0]["items"]], ["霸气嫩牛套餐"])
+        self.assertEqual(payload["orders"][0]["items"][0]["mealPeriod"], "dinner")
+        excluded = {row["name"] for row in audit["items"] if not row["keep"]}
+        self.assertEqual(excluded, {"六姐麻辣", "五常稻花香米饭", "需要餐具"})
+
+    def test_future_items_use_order_context_instead_of_one_keyword(self):
+        raw = [{
+            "restaurant": "测试餐厅",
+            "items": [
+                {"name": "黑椒牛肉炒饭", "quantity": 1},
+                {"name": "原味蘸料", "quantity": 1},
+            ],
+            "date": "2026-07-14",
+            "time": "12:30",
+            "total": 30,
+            "address": "电影华苑",
+        }]
+        payload, audit = MODULE.build_public_payload_with_audit(raw)
+        self.assertEqual([item["name"] for item in payload["orders"][0]["items"]], ["黑椒牛肉炒饭"])
+        sources = {row["name"]: row["source"] for row in audit["items"]}
+        self.assertEqual(sources, {"原味蘸料": "inferred", "黑椒牛肉炒饭": "inferred"})
+
+    def test_every_published_item_has_valid_meal_period(self):
+        raw = [{
+            "restaurant": "皇不管夜包子",
+            "items": [{"name": "鲜肉小笼包", "quantity": 1}],
+            "date": "2026-07-14",
+            "time": "08:30",
+            "total": 20,
+            "address": "电影华苑",
+        }]
+        payload = MODULE.build_public_payload(raw)
+        self.assertEqual(payload["schemaVersion"], 4)
+        self.assertEqual(payload["orders"][0]["items"][0]["mealPeriod"], "breakfast")
+
+    def test_same_dish_across_dates_branches_and_reviewed_aliases_has_one_id(self):
+        raw = [
+            {
+                "restaurant": "成都你六姐·牛肉冒菜（上海光启城店）",
+                "items": [{"name": "六姐霸气嫩牛套餐", "quantity": 1}],
+                "date": "2026-07-14",
+                "time": "18:30",
+                "total": 40,
+                "address": "电影华苑",
+            },
+            {
+                "restaurant": "成都你六姐·牛肉冒菜（另一分店）",
+                "items": [{"name": "霸气嫩牛套餐", "quantity": 1}],
+                "date": "2026-06-14",
+                "time": "19:00",
+                "total": 42,
+                "address": "电影华苑",
+            },
+        ]
+        payload, audit = MODULE.build_public_payload_with_audit(raw)
+        self.assertEqual(payload["uniqueKeptSourceItems"], 2)
+        self.assertEqual(payload["uniqueMealItems"], 1)
+        self.assertEqual(len(payload["dishes"]), 1)
+        self.assertEqual(payload["dishes"][0]["name"], "霸气嫩牛套餐")
+        dish_ids = {order["items"][0]["dishId"] for order in payload["orders"]}
+        self.assertEqual(len(dish_ids), 1)
+        canonical = {row["name"]: row.get("canonicalName") for row in audit["items"]}
+        self.assertEqual(canonical["六姐霸气嫩牛套餐"], "霸气嫩牛套餐")
 
     def test_dish_name_removes_marketing_prefix_and_bracket_notes(self):
         examples = {
