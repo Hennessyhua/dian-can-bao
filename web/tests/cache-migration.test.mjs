@@ -44,3 +44,20 @@ test("clean clients do not trigger a reload migration", async () => {
   });
   assert.equal(result.changed, false);
 });
+
+test("a cache recreated by an in-flight legacy request is removable on the next load", async () => {
+  const cacheNames = new Set(["dian-can-bao-v1"]);
+  const cacheStorage = {
+    async keys() { return [...cacheNames]; },
+    async delete(name) { return cacheNames.delete(name); },
+  };
+
+  const result = await clearLegacyOfflineState({
+    serviceWorkerContainer: { getRegistrations: async () => [] },
+    cacheStorage,
+    scopeUrl: "https://example.test/dian-can-bao/",
+  });
+
+  assert.equal(result.changed, true);
+  assert.deepEqual([...cacheNames], []);
+});

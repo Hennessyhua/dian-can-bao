@@ -14,8 +14,7 @@ const CACHE_RESET_KEY = "dian-can-bao.cache-reset.v2";
 
 if (import.meta.env.PROD && ("serviceWorker" in navigator || "caches" in window)) {
   window.addEventListener("load", () => {
-    if (sessionStorage.getItem(CACHE_RESET_KEY)) return;
-
+    const alreadyReloaded = sessionStorage.getItem(CACHE_RESET_KEY) === "done";
     const scopeUrl = resolveAppScope(import.meta.env.BASE_URL, document.baseURI);
     clearLegacyOfflineState({
       serviceWorkerContainer: navigator.serviceWorker,
@@ -23,7 +22,7 @@ if (import.meta.env.PROD && ("serviceWorker" in navigator || "caches" in window)
       scopeUrl,
     })
       .then(({ changed }) => {
-        if (!changed) return;
+        if (!changed || alreadyReloaded) return;
         sessionStorage.setItem(CACHE_RESET_KEY, "done");
         window.location.reload();
       })
