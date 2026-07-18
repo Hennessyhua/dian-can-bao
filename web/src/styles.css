@@ -28,6 +28,7 @@
 body {
   margin: 0;
   min-width: 320px;
+  min-height: 100vh;
   min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   background: #dfeee8;
@@ -36,6 +37,7 @@ body {
 
 .mobile-prototype {
   width: min(100%, 520px);
+  height: 100vh;
   height: 100dvh;
   max-height: 900px;
   margin-inline: auto;

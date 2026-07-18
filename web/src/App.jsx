@@ -252,7 +252,10 @@ export function App() {
 
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}data/orders.public.json`, { signal: controller.signal })
+    fetch(`${import.meta.env.BASE_URL}data/orders.public.json`, {
+      signal: controller.signal,
+      cache: "no-store",
+    })
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
