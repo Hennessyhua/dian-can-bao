@@ -1,5 +1,9 @@
 const LEGACY_CACHE_PREFIX = "dian-can-bao-";
 
+export function resolveAppScope(baseUrl, documentBaseUrl) {
+  return new URL(baseUrl, documentBaseUrl).href;
+}
+
 export async function clearLegacyOfflineState({
   serviceWorkerContainer,
   cacheStorage,

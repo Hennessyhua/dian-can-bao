@@ -1,6 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { clearLegacyOfflineState } from "../src/cache-migration.js";
+import { clearLegacyOfflineState, resolveAppScope } from "../src/cache-migration.js";
+
+test("relative build base resolves to this GitHub Pages project only", () => {
+  assert.equal(
+    resolveAppScope("./", "https://hennessyhua.github.io/dian-can-bao/?v=current"),
+    "https://hennessyhua.github.io/dian-can-bao/",
+  );
+});
 
 test("legacy service worker and app caches are removed without touching other sites", async () => {
   const unregistered = [];
