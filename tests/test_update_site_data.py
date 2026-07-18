@@ -109,6 +109,20 @@ class PublicDataTests(unittest.TestCase):
         self.assertEqual(payload["schemaVersion"], 4)
         self.assertEqual(payload["orders"][0]["items"][0]["mealPeriod"], "breakfast")
 
+    def test_snacks_are_published_in_their_own_period(self):
+        raw = [{
+            "restaurant": "测试奶茶店",
+            "items": [{"name": "杨梅百香观音", "quantity": 1}],
+            "date": "2026-07-14",
+            "time": "14:30",
+            "total": 20,
+            "address": "新茂大厦",
+        }]
+        payload, audit = MODULE.build_public_payload_with_audit(raw)
+        self.assertEqual(payload["publishedOrderCount"], 1)
+        self.assertEqual(payload["orders"][0]["items"][0]["mealPeriod"], "snack")
+        self.assertEqual(audit["items"][0]["source"], "curated")
+
     def test_same_dish_across_dates_branches_and_reviewed_aliases_has_one_id(self):
         raw = [
             {

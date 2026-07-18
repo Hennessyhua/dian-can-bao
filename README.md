@@ -62,7 +62,7 @@ cd <点餐宝项目目录>
 python3 scripts/update_site_data.py --scrape
 ```
 
-该命令会：打开美团登录页、采集订单、将原始数据保存在 `.private/`、把地址映射为地点标签、清除菜名营销内容、逐项归档独立主菜、推理早午晚餐段，并生成 `web/public/data/orders.public.json`。逐项审计结果保存在 `.private/dish-classification.audit.json`。提交并推送公开文件后，GitHub Pages 会自动更新。
+该命令会：打开美团登录页、采集订单、将原始数据保存在 `.private/`、把地址映射为地点标签、清除菜名营销内容、逐项归档独立主菜及小吃、推理早午晚餐段，并生成 `web/public/data/orders.public.json`。逐项审计结果保存在 `.private/dish-classification.audit.json`。提交并推送公开文件后，GitHub Pages 会自动更新。
 
 只想根据本机已有订单重新生成网页数据时：
 

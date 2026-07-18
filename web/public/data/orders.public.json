@@ -1,15 +1,15 @@
 {
   "schemaVersion": 4,
-  "classificationVersion": 3,
-  "generatedAt": "2026-07-18T08:22:19+00:00",
+  "classificationVersion": 4,
+  "generatedAt": "2026-07-18T08:37:51+00:00",
   "sourceOrderCount": 295,
-  "publishedOrderCount": 231,
+  "publishedOrderCount": 273,
   "sourceItemCount": 579,
-  "publishedItemCount": 255,
+  "publishedItemCount": 353,
   "uniqueSourceItems": 331,
-  "uniqueKeptSourceItems": 143,
-  "uniqueMealItems": 137,
-  "uniqueExcludedItems": 188,
+  "uniqueKeptSourceItems": 212,
+  "uniqueMealItems": 206,
+  "uniqueExcludedItems": 119,
   "locations": [
     {
       "code": "home_xuhui",
@@ -39,6 +39,24 @@
       "orderCount": 1,
       "restaurants": [
         "乐川汇·豆花川菜（泰康路店）"
+      ]
+    },
+    {
+      "id": "60033b9c967d",
+      "name": "Amazing",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "梧桐姥姥(上海徐汇日月光店)"
+      ]
+    },
+    {
+      "id": "9edf5b179e5d",
+      "name": "BHC同款芝士球1颗",
+      "mealPeriod": "snack",
+      "orderCount": 6,
+      "restaurants": [
+        "ZOONANA首尔炸鸡（徐家汇店）"
       ]
     },
     {
@@ -78,12 +96,30 @@
       ]
     },
     {
+      "id": "555069710527",
+      "name": "乌梅凤梨+乌梅番茄",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（徐汇店·果切·水果捞）"
+      ]
+    },
+    {
       "id": "7b3816760b14",
       "name": "乌香黑米粥",
       "mealPeriod": "dinner",
       "orderCount": 1,
       "restaurants": [
         "三米粥铺(徐汇万体馆店)"
+      ]
+    },
+    {
+      "id": "07ed63f7b8b3",
+      "name": "云南花香蓝莓 125g/盒",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（徐汇店·果切·水果捞）"
       ]
     },
     {
@@ -96,12 +132,30 @@
       ]
     },
     {
+      "id": "fa9aa19ddffd",
+      "name": "五香茶叶蛋",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "眷村飘香(豆浆油条•人民广场店)"
+      ]
+    },
+    {
       "id": "d7a4a1573782",
       "name": "亚麻籽油烤虾超级碗套餐",
       "mealPeriod": "dinner",
       "orderCount": 1,
       "restaurants": [
         "超级碗FOODBOWL(上海徐汇ITC一期店)"
+      ]
+    },
+    {
+      "id": "d9bb198d16c1",
+      "name": "伊利 玉米香雪糕 65g/支 玉米造型蛋卷外皮搭配香浓玉米冰淇淋冰激凌休闲冷饮",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "乐购达超市（上海南站店）"
       ]
     },
     {
@@ -120,6 +174,15 @@
       "orderCount": 1,
       "restaurants": [
         "FoodGame超级厨房(日月光店)"
+      ]
+    },
+    {
+      "id": "42965168fa86",
+      "name": "免费茶叶蛋一个",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "东北千层饼(宛平南路店)"
       ]
     },
     {
@@ -159,12 +222,50 @@
       ]
     },
     {
+      "id": "ec2a9595d70e",
+      "name": "军屯锅盔",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "宽的窄的面馆",
+        "宽的窄的面馆(茂名路店)"
+      ]
+    },
+    {
       "id": "984d23c4fb73",
       "name": "凉皮+肉夹馍/堡+黑胡椒鸡块3块+饮品",
       "mealPeriod": "lunch",
       "orderCount": 1,
       "restaurants": [
         "漠漠家·凉皮(汉堡·油泼面·新天地店)"
+      ]
+    },
+    {
+      "id": "bce4bcfac3b6",
+      "name": "凤梨夹乌梅约250克",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "盛果仓（徐汇店·果切·水果捞）",
+        "盛果仓（老西门店·果切·水果捞）"
+      ]
+    },
+    {
+      "id": "47a01b8854f9",
+      "name": "凤梨果切.150g",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "红集牌高品质水果（日月光店）"
+      ]
+    },
+    {
+      "id": "58310f269449",
+      "name": "剥壳荔枝+芒果+西瓜.350g",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "红集牌高品质水果（日月光店）"
       ]
     },
     {
@@ -195,6 +296,15 @@
       ]
     },
     {
+      "id": "634be4296c3a",
+      "name": "双拼鸡蛋仔",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "美芝莲（南洋1931店）"
+      ]
+    },
+    {
       "id": "5dfe8a561e15",
       "name": "堡卷随心选3件套",
       "mealPeriod": "dinner",
@@ -211,6 +321,15 @@
       "orderCount": 1,
       "restaurants": [
         "邵火火鲍汁黄焖鸡（人民广场热先生店）"
+      ]
+    },
+    {
+      "id": "96970856c640",
+      "name": "大口吃芒果果切约200克",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（徐汇店·果切·水果捞）"
       ]
     },
     {
@@ -239,6 +358,15 @@
       "restaurants": [
         "紫燕百味鸡(枫林店)",
         "紫燕百味鸡（宣化店）"
+      ]
+    },
+    {
+      "id": "33ee954d4553",
+      "name": "奇兰芭乐莲雾",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "喜茶（上海飞洲国际店）"
       ]
     },
     {
@@ -277,6 +405,15 @@
       "orderCount": 1,
       "restaurants": [
         "马记禄牛肉面·西北菜（天钥桥路店）"
+      ]
+    },
+    {
+      "id": "68b479bba518",
+      "name": "小串冰糖葫芦5串任选",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "糖小满·冰糖葫芦(徐汇tpy广场店）"
       ]
     },
     {
@@ -326,6 +463,24 @@
       ]
     },
     {
+      "id": "6359235b2201",
+      "name": "小白甜豆浆",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "浆小白·豆浆夜市·肠粉·小笼包·（交通大学店）"
+      ]
+    },
+    {
+      "id": "4b65753e6543",
+      "name": "小白豆浆",
+      "mealPeriod": "snack",
+      "orderCount": 3,
+      "restaurants": [
+        "浆小白·肠粉·小笼包·豆浆夜市（交通大学店）"
+      ]
+    },
+    {
       "id": "fdbad18cf301",
       "name": "干切牛肉汤类+牛肉锅贴1两",
       "mealPeriod": "breakfast",
@@ -353,6 +508,33 @@
       ]
     },
     {
+      "id": "bc063e36a285",
+      "name": "当季双拼自选果切约220克",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（徐汇店·果切·水果捞）"
+      ]
+    },
+    {
+      "id": "278e32179fea",
+      "name": "彩虹糖 酸了心 酸劲味糖果 40g/袋 童年经典香甜脆皮多果味彩色休闲儿童节",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "乐购达超市（上海南站店）"
+      ]
+    },
+    {
+      "id": "b4588d32ee2d",
+      "name": "必喝系列5选2",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "煲珠公·老红糖珍珠奶茶（光启城店）"
+      ]
+    },
+    {
       "id": "df3022338f08",
       "name": "怂厂随心搭+奶茶自选豪华套餐",
       "mealPeriod": "dinner",
@@ -377,6 +559,15 @@
       "orderCount": 2,
       "restaurants": [
         "夺欢喜·贵州酸汤冒菜（百脑汇店）"
+      ]
+    },
+    {
+      "id": "0f682ee35021",
+      "name": "抹茶米麻薯流心挞",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "gluglu面包（思南路店）"
       ]
     },
     {
@@ -461,12 +652,39 @@
       ]
     },
     {
+      "id": "9f8eb4044645",
+      "name": "掬水轩 苹果味秀逗糖 15g/袋 先酸后甜整蛊水果糖超级酸爆酸变态酸",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "乐购达超市（上海南站店）"
+      ]
+    },
+    {
       "id": "5c2e78b1b807",
       "name": "揪片子汤饭",
       "mealPeriod": "dinner",
       "orderCount": 1,
       "restaurants": [
         "丝路新疆烤肉餐厅（宛平南路店）"
+      ]
+    },
+    {
+      "id": "2f8d65cc62c8",
+      "name": "整块芒果糯米糍",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "有米有甜•米糕•糯米糍（徐家汇TPY店）"
+      ]
+    },
+    {
+      "id": "2fdbae7adfa6",
+      "name": "斑斓青团",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "茶百道（天钥桥路店）"
       ]
     },
     {
@@ -488,6 +706,15 @@
       ]
     },
     {
+      "id": "7d4f32bc85f7",
+      "name": "新鲜凤梨果切约250克",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（徐汇店·果切·水果捞）"
+      ]
+    },
+    {
       "id": "e9fb87c884a4",
       "name": "无骨炸鸡&年糕套餐",
       "mealPeriod": "dinner",
@@ -497,12 +724,30 @@
       ]
     },
     {
+      "id": "0df947bbb82d",
+      "name": "旺仔 QQ糖 橡皮糖 菠萝味 70g/袋 经典水果口味Q弹休闲零食袋装儿童节",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "乐购达超市（上海南站店）"
+      ]
+    },
+    {
       "id": "f24ae12125a6",
       "name": "更香更辣鸡腿堡4件套",
       "mealPeriod": "dinner",
       "orderCount": 1,
       "restaurants": [
         "肯德基宅急送（天钥桥路店）"
+      ]
+    },
+    {
+      "id": "bf3ffd4180e3",
+      "name": "曼谷日落·咸法酪泰奶",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "迷客夏Milksha(上海新天地东台里店)"
       ]
     },
     {
@@ -521,6 +766,33 @@
       "orderCount": 4,
       "restaurants": [
         "山东杂粮煎饼（天钥桥路店）"
+      ]
+    },
+    {
+      "id": "0a0e7f96d4e1",
+      "name": "杨桃三重甘",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "喜茶(上海中环广场店)"
+      ]
+    },
+    {
+      "id": "a10c536a00d6",
+      "name": "杨梅百香观音",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "TEA'DAY·时下有茶（无限极荟店）"
+      ]
+    },
+    {
+      "id": "b8c826b3f772",
+      "name": "柚子芒果船·固体杨枝甘露约250-300克",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（茂名公馆店·果切·水果捞）"
       ]
     },
     {
@@ -554,11 +826,30 @@
     {
       "id": "b0eb85350606",
       "name": "正新香辣大鸡排",
-      "mealPeriod": "lunch",
+      "mealPeriod": "snack",
       "orderCount": 2,
       "restaurants": [
         "正新鸡排·炸鸡烧烤（8号桥店）",
         "正新鸡排·鸡腿汉堡（田林店）"
+      ]
+    },
+    {
+      "id": "5bdbed1372df",
+      "name": "武林香辣鸭头",
+      "mealPeriod": "snack",
+      "orderCount": 3,
+      "restaurants": [
+        "对酒当歌地道川菜（南丹东路店）",
+        "对酒当歌地道川菜（肇嘉浜路店）"
+      ]
+    },
+    {
+      "id": "5fb879153e2b",
+      "name": "水果夹干噎酸奶黄肉菠萝蜜250克",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（徐汇店·果切·水果捞）"
       ]
     },
     {
@@ -578,6 +869,15 @@
       "orderCount": 11,
       "restaurants": [
         "共禾之约·轻食健康餐（利园店）"
+      ]
+    },
+    {
+      "id": "385a479b5e6a",
+      "name": "泰奶冰淇淋茶",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "CHAIKU(西岸梦中心店）"
       ]
     },
     {
@@ -605,6 +905,15 @@
       "orderCount": 1,
       "restaurants": [
         "乐川汇·豆花川菜（泰康路店）"
+      ]
+    },
+    {
+      "id": "c18ce793abee",
+      "name": "洗净美早樱桃+凤梨果切约220克",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（老西门店·果切·水果捞）"
       ]
     },
     {
@@ -636,12 +945,57 @@
       ]
     },
     {
+      "id": "ea71189f3b2f",
+      "name": "炸泡菜饺子 튀긴만두",
+      "mealPeriod": "snack",
+      "orderCount": 3,
+      "restaurants": [
+        "金太太•韩国包饭(徐汇店)"
+      ]
+    },
+    {
+      "id": "c3bb1e776afe",
+      "name": "炸淀粉肠",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "J·KA疆咖（新疆炒米粉·徐家汇店）"
+      ]
+    },
+    {
       "id": "f50668b8afc0",
       "name": "炸肉酱拼60克吊龙米线",
       "mealPeriod": "lunch",
       "orderCount": 1,
       "restaurants": [
         "阿食云南生烫牛肉米线（第B110档口美食城店）"
+      ]
+    },
+    {
+      "id": "72f976f13911",
+      "name": "炸骨肉相连",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "辣风芹·新疆炒米粉(淮海中路店)"
+      ]
+    },
+    {
+      "id": "2696650af4d7",
+      "name": "炸鱼排",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "辣风芹·新疆炒米粉(淮海中路店)"
+      ]
+    },
+    {
+      "id": "d2b353a99b1e",
+      "name": "炸鱼豆腐",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "J·KA疆咖（新疆炒米粉·徐家汇店）"
       ]
     },
     {
@@ -663,12 +1017,48 @@
       ]
     },
     {
+      "id": "bb6b8b0e502e",
+      "name": "烤豆角串",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）"
+      ]
+    },
+    {
+      "id": "4a9918492955",
+      "name": "烤辣椒串",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）"
+      ]
+    },
+    {
+      "id": "caea35a4e682",
+      "name": "烤鱼豆腐",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）"
+      ]
+    },
+    {
       "id": "eb7fa1f2773f",
       "name": "热辣双拼炸鸡任选2件",
       "mealPeriod": "dinner",
       "orderCount": 1,
       "restaurants": [
         "肯德基宅急送（天钥桥路店）"
+      ]
+    },
+    {
+      "id": "24c30e0fb508",
+      "name": "爆汁炸鸡块",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "安又胖韩式拌饭·料理（上海美罗城店）"
       ]
     },
     {
@@ -726,6 +1116,15 @@
       ]
     },
     {
+      "id": "1c14c9c9f34b",
+      "name": "现烤玫瑰鲜花饼",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "宫小燕·姨妈热饮·现炖燕窝（静安店）"
+      ]
+    },
+    {
       "id": "3d3b5862a6da",
       "name": "现蒸鲜肉小笼包7个＋慢熬南瓜粥",
       "mealPeriod": "breakfast",
@@ -741,6 +1140,15 @@
       "orderCount": 1,
       "restaurants": [
         "J·KA疆咖（新疆炒米粉·徐家汇店）"
+      ]
+    },
+    {
+      "id": "5a234a0d92fd",
+      "name": "百醇 红酒巧克力味注心饼干 48g/盒 早餐追剧休闲零食糕点办公室下午茶夹心饼干棒盒装",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "乐购达超市（上海南站店）"
       ]
     },
     {
@@ -789,6 +1197,15 @@
       ]
     },
     {
+      "id": "d09db379573b",
+      "name": "空运云南黑炭杨梅约250克",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（老西门店·果切·水果捞）"
+      ]
+    },
+    {
       "id": "de25f6f56445",
       "name": "笋子牛肉米粉",
       "mealPeriod": "dinner",
@@ -796,6 +1213,33 @@
       "restaurants": [
         "宽的窄的面馆",
         "宽的窄的面馆(茂名路店)"
+      ]
+    },
+    {
+      "id": "67c2d4c826e5",
+      "name": "红枣牛奶/椰奶炖桃胶300ml",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "宫小燕·姨妈热饮·现炖燕窝（静安店）"
+      ]
+    },
+    {
+      "id": "9ba2a7067b50",
+      "name": "红集乌梅凤梨.250g",
+      "mealPeriod": "snack",
+      "orderCount": 7,
+      "restaurants": [
+        "红集牌高品质水果（日月光店）"
+      ]
+    },
+    {
+      "id": "f951719dc6b4",
+      "name": "红集品牌西瓜果切.250-500g",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "红集牌高品质水果（日月光店）"
       ]
     },
     {
@@ -889,6 +1333,15 @@
       ]
     },
     {
+      "id": "bded8fac5f38",
+      "name": "自选水果桶约400克",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "盛果仓（老西门店·果切·水果捞）"
+      ]
+    },
+    {
       "id": "fe007f48ac9d",
       "name": "自选粥品+香辣肉夹馍",
       "mealPeriod": "dinner",
@@ -904,6 +1357,24 @@
       "orderCount": 1,
       "restaurants": [
         "山石榴·贵州菜（龙华会店）"
+      ]
+    },
+    {
+      "id": "26f8b5b34707",
+      "name": "草莓+凤梨乌梅+乌梅小番茄.350g",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "红集牌高品质水果（日月光店）"
+      ]
+    },
+    {
+      "id": "eac75e551e96",
+      "name": "草莓奶酪糯米糍",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "有米有甜•米糕•糯米糍（徐家汇TPY店）"
       ]
     },
     {
@@ -962,6 +1433,24 @@
       ]
     },
     {
+      "id": "a60fdad46df8",
+      "name": "蜂巢焦糖鲜牛乳茶",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "LEACH栗其（巨鹿路店）"
+      ]
+    },
+    {
+      "id": "66b71f912204",
+      "name": "西瓜啵啵",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "茶百道（天钥桥路店）"
+      ]
+    },
+    {
       "id": "9f8b71d507ef",
       "name": "豆花牛肉",
       "mealPeriod": "dinner",
@@ -989,6 +1478,15 @@
       ]
     },
     {
+      "id": "92af72b893c3",
+      "name": "赣南橙子鲜切.250g",
+      "mealPeriod": "snack",
+      "orderCount": 3,
+      "restaurants": [
+        "红集牌高品质水果（日月光店）"
+      ]
+    },
+    {
       "id": "7cc4913079c8",
       "name": "辣炒猪肉包饭 매운제육볶음",
       "mealPeriod": "dinner",
@@ -1004,6 +1502,43 @@
       "orderCount": 1,
       "restaurants": [
         "小杨生煎（东安路店）"
+      ]
+    },
+    {
+      "id": "58f3a0310755",
+      "name": "辣翅买一送一",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "肯德基宅急送（天钥桥路一店）",
+        "肯德基宅急送（天钥桥路店）"
+      ]
+    },
+    {
+      "id": "f849f3f91a18",
+      "name": "避风塘大虾塔可",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "肯德基宅急送（天钥桥路一店）"
+      ]
+    },
+    {
+      "id": "d698097196ad",
+      "name": "酒酿红豆豆花冻+古法桂花酒酿",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "老米记酒酿铺（丰富路店)"
+      ]
+    },
+    {
+      "id": "1c11c16ecd13",
+      "name": "酒酿芝麻汤圆",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "东北千层饼(宛平南路店)"
       ]
     },
     {
@@ -1089,6 +1624,15 @@
       ]
     },
     {
+      "id": "4723d25646af",
+      "name": "醪糟黑芝麻汤圆",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "剪花娘子·陕西面馆（上海湖滨道店）"
+      ]
+    },
+    {
       "id": "2538bf71ee20",
       "name": "里脊肉手抓蛋饼",
       "mealPeriod": "breakfast",
@@ -1125,6 +1669,51 @@
       ]
     },
     {
+      "id": "329b576ec9c5",
+      "name": "金砖丝袜奶茶 ❥→连冰块都是用奶茶做的",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "美芝莲（南洋1931店）"
+      ]
+    },
+    {
+      "id": "0e2a7ae0e771",
+      "name": "针王蜜瓜",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "茉莉奶白（上海太平洋新天地店）"
+      ]
+    },
+    {
+      "id": "fbb0cac8760c",
+      "name": "锁鲜卤鸭脖",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "周黑鸭(上海地铁徐家汇2店)"
+      ]
+    },
+    {
+      "id": "69969dff5b3b",
+      "name": "随心自选双拼果切.250",
+      "mealPeriod": "snack",
+      "orderCount": 5,
+      "restaurants": [
+        "红集牌高品质水果（日月光店）"
+      ]
+    },
+    {
+      "id": "805cb42605bc",
+      "name": "零度可乐",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "达美乐比萨（南丹路店）"
+      ]
+    },
+    {
       "id": "afd20c306dea",
       "name": "霸气嫩牛套餐",
       "mealPeriod": "dinner",
@@ -1152,6 +1741,15 @@
       ]
     },
     {
+      "id": "9cb463bd9cbf",
+      "name": "韩式炸无骨鸡块2块",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "ZOONANA首尔炸鸡（徐家汇店）"
+      ]
+    },
+    {
       "id": "be45c4c10a23",
       "name": "韭菜盒子",
       "mealPeriod": "breakfast",
@@ -1167,6 +1765,15 @@
       "orderCount": 1,
       "restaurants": [
         "花小小新疆炒米粉（南丹东路店）"
+      ]
+    },
+    {
+      "id": "d3615e60dd94",
+      "name": "香脆牛肉饼",
+      "mealPeriod": "snack",
+      "orderCount": 2,
+      "restaurants": [
+        "三米粥铺(徐汇万体馆店)"
       ]
     },
     {
@@ -1263,9 +1870,27 @@
       ]
     },
     {
+      "id": "78f0c893cf44",
+      "name": "黄金小馒头4个",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "三米粥铺(徐汇万体馆店)"
+      ]
+    },
+    {
+      "id": "3b7bceeaadf1",
+      "name": "黄金薯塔",
+      "mealPeriod": "snack",
+      "orderCount": 1,
+      "restaurants": [
+        "正新鸡排·鸡腿汉堡（田林店）"
+      ]
+    },
+    {
       "id": "f38a95feeb68",
       "name": "분모자떡볶이 韩式炒年糕",
-      "mealPeriod": "dinner",
+      "mealPeriod": "snack",
       "orderCount": 1,
       "restaurants": [
         "金太太•韩国包饭(徐汇店)"
@@ -1325,10 +1950,22 @@
       "restaurant": "三米粥铺(徐汇万体馆店)",
       "items": [
         {
+          "name": "黄金小馒头4个",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "78f0c893cf44"
+        },
+        {
           "name": "乌香黑米粥",
           "quantity": 1,
           "mealPeriod": "dinner",
           "dishId": "7b3816760b14"
+        },
+        {
+          "name": "香脆牛肉饼",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "d3615e60dd94"
         }
       ],
       "date": "2026-07-15",
@@ -1356,6 +1993,12 @@
     {
       "restaurant": "眷村飘香(豆浆油条•人民广场店)",
       "items": [
+        {
+          "name": "五香茶叶蛋",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "fa9aa19ddffd"
+        },
         {
           "name": "韭菜盒子",
           "quantity": 1,
@@ -1457,6 +2100,18 @@
           "quantity": 1,
           "mealPeriod": "dinner",
           "dishId": "5dfe8a561e15"
+        },
+        {
+          "name": "辣翅买一送一",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "58f3a0310755"
+        },
+        {
+          "name": "避风塘大虾塔可",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "f849f3f91a18"
         }
       ],
       "date": "2026-07-10",
@@ -1477,8 +2132,14 @@
         {
           "name": "분모자떡볶이 韩式炒年糕",
           "quantity": 1,
-          "mealPeriod": "dinner",
+          "mealPeriod": "snack",
           "dishId": "f38a95feeb68"
+        },
+        {
+          "name": "炸泡菜饺子 튀긴만두",
+          "quantity": 3,
+          "mealPeriod": "snack",
+          "dishId": "ea71189f3b2f"
         }
       ],
       "date": "2026-07-09",
@@ -1587,6 +2248,12 @@
       "restaurant": "剪花娘子·陕西面馆（上海湖滨道店）",
       "items": [
         {
+          "name": "醪糟黑芝麻汤圆",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "4723d25646af"
+        },
+        {
           "name": "酸汤臊子面",
           "quantity": 1,
           "mealPeriod": "lunch",
@@ -1619,6 +2286,18 @@
       "restaurant": "东北千层饼(宛平南路店)",
       "items": [
         {
+          "name": "酒酿芝麻汤圆",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "1c11c16ecd13"
+        },
+        {
+          "name": "免费茶叶蛋一个",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "42965168fa86"
+        },
+        {
           "name": "鸡蛋饼+土豆丝+香肠",
           "quantity": 1,
           "mealPeriod": "breakfast",
@@ -1648,12 +2327,34 @@
       "locationLabel": "新天地（徕卡办公室）"
     },
     {
+      "restaurant": "糖小满·冰糖葫芦(徐汇tpy广场店）",
+      "items": [
+        {
+          "name": "小串冰糖葫芦5串任选",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "68b479bba518"
+        }
+      ],
+      "date": "2026-07-05",
+      "time": "17:03",
+      "total": 21.0,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "正新鸡排·鸡腿汉堡（田林店）",
       "items": [
         {
+          "name": "黄金薯塔",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "3b7bceeaadf1"
+        },
+        {
           "name": "正新香辣大鸡排",
           "quantity": 1,
-          "mealPeriod": "lunch",
+          "mealPeriod": "snack",
           "dishId": "b0eb85350606"
         }
       ],
@@ -1667,6 +2368,12 @@
       "restaurant": "安又胖韩式拌饭·料理（上海美罗城店）",
       "items": [
         {
+          "name": "爆汁炸鸡块",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "24c30e0fb508"
+        },
+        {
           "name": "安又胖韩式冷面单人餐",
           "quantity": 1,
           "mealPeriod": "dinner",
@@ -1676,6 +2383,34 @@
       "date": "2026-07-04",
       "time": "20:07",
       "total": 37.59,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "盛果仓（徐汇店·果切·水果捞）",
+      "items": [
+        {
+          "name": "大口吃芒果果切约200克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "96970856c640"
+        },
+        {
+          "name": "当季双拼自选果切约220克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "bc063e36a285"
+        },
+        {
+          "name": "凤梨夹乌梅约250克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "bce4bcfac3b6"
+        }
+      ],
+      "date": "2026-07-04",
+      "time": "16:35",
+      "total": 25.29,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
     },
@@ -1692,6 +2427,28 @@
       "date": "2026-07-04",
       "time": "13:17",
       "total": 47.7,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "美芝莲（南洋1931店）",
+      "items": [
+        {
+          "name": "金砖丝袜奶茶 ❥→连冰块都是用奶茶做的",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "329b576ec9c5"
+        },
+        {
+          "name": "双拼鸡蛋仔",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "634be4296c3a"
+        }
+      ],
+      "date": "2026-07-04",
+      "time": "10:26",
+      "total": 27.0,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
     },
@@ -1831,6 +2588,12 @@
           "quantity": 1,
           "mealPeriod": "dinner",
           "dishId": "a7d4dd8dcbbf"
+        },
+        {
+          "name": "BHC同款芝士球1颗",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9edf5b179e5d"
         }
       ],
       "date": "2026-06-29",
@@ -1854,6 +2617,28 @@
       "total": 29.7,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "红集牌高品质水果（日月光店）",
+      "items": [
+        {
+          "name": "凤梨果切.150g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "47a01b8854f9"
+        },
+        {
+          "name": "剥壳荔枝+芒果+西瓜.350g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "58310f269449"
+        }
+      ],
+      "date": "2026-06-29",
+      "time": "15:15",
+      "total": 16.79,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
     },
     {
       "restaurant": "鱼你在一起（黄浦复兴天地店）",
@@ -1927,6 +2712,18 @@
           "quantity": 1,
           "mealPeriod": "lunch",
           "dishId": "fda2343bc77f"
+        },
+        {
+          "name": "炸鱼豆腐",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "d2b353a99b1e"
+        },
+        {
+          "name": "炸淀粉肠",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "c3bb1e776afe"
         }
       ],
       "date": "2026-06-28",
@@ -2022,6 +2819,22 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "周黑鸭(上海地铁徐家汇2店)",
+      "items": [
+        {
+          "name": "锁鲜卤鸭脖",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "fbb0cac8760c"
+        }
+      ],
+      "date": "2026-06-25",
+      "time": "18:53",
+      "total": 27.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "皇不管夜包子(徐汇店)",
       "items": [
         {
@@ -2038,12 +2851,28 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "迷客夏Milksha(上海新天地东台里店)",
+      "items": [
+        {
+          "name": "曼谷日落·咸法酪泰奶",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "bf3ffd4180e3"
+        }
+      ],
+      "date": "2026-06-25",
+      "time": "15:58",
+      "total": 19.6,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "正新鸡排·炸鸡烧烤（8号桥店）",
       "items": [
         {
           "name": "正新香辣大鸡排",
           "quantity": 1,
-          "mealPeriod": "lunch",
+          "mealPeriod": "snack",
           "dishId": "b0eb85350606"
         }
       ],
@@ -2057,6 +2886,12 @@
       "restaurant": "对酒当歌地道川菜（南丹东路店）",
       "items": [
         {
+          "name": "武林香辣鸭头",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "5bdbed1372df"
+        },
+        {
           "name": "豆花牛肉",
           "quantity": 1,
           "mealPeriod": "dinner",
@@ -2068,6 +2903,28 @@
       "total": 97.8,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "红集牌高品质水果（日月光店）",
+      "items": [
+        {
+          "name": "红集乌梅凤梨.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9ba2a7067b50"
+        },
+        {
+          "name": "随心自选双拼果切.250",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "69969dff5b3b"
+        }
+      ],
+      "date": "2026-06-24",
+      "time": "14:14",
+      "total": 15.81,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
     },
     {
       "restaurant": "锅气·湖南饭店(香港广场店)",
@@ -2114,6 +2971,22 @@
       "date": "2026-06-23",
       "time": "09:09",
       "total": 8.0,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
+      "restaurant": "gluglu面包（思南路店）",
+      "items": [
+        {
+          "name": "抹茶米麻薯流心挞",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "0f682ee35021"
+        }
+      ],
+      "date": "2026-06-22",
+      "time": "17:20",
+      "total": 31.7,
       "locationCode": "office_xintiandi",
       "locationLabel": "新天地（徕卡办公室）"
     },
@@ -2188,6 +3061,38 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "老米记酒酿铺（丰富路店)",
+      "items": [
+        {
+          "name": "酒酿红豆豆花冻+古法桂花酒酿",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "d698097196ad"
+        }
+      ],
+      "date": "2026-06-20",
+      "time": "19:32",
+      "total": 24.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "喜茶(上海中环广场店)",
+      "items": [
+        {
+          "name": "杨桃三重甘",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "0a0e7f96d4e1"
+        }
+      ],
+      "date": "2026-06-18",
+      "time": "14:37",
+      "total": 26.0,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "华记桂林米粉(北京西路店)",
       "items": [
         {
@@ -2200,6 +3105,28 @@
       "date": "2026-06-18",
       "time": "11:12",
       "total": 24.1,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
+      "restaurant": "红集牌高品质水果（日月光店）",
+      "items": [
+        {
+          "name": "随心自选双拼果切.250",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "69969dff5b3b"
+        },
+        {
+          "name": "红集乌梅凤梨.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9ba2a7067b50"
+        }
+      ],
+      "date": "2026-06-17",
+      "time": "14:17",
+      "total": 15.81,
       "locationCode": "office_xintiandi",
       "locationLabel": "新天地（徕卡办公室）"
     },
@@ -2284,8 +3211,30 @@
       "locationLabel": "新天地（徕卡办公室）"
     },
     {
+      "restaurant": "煲珠公·老红糖珍珠奶茶（光启城店）",
+      "items": [
+        {
+          "name": "必喝系列5选2",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "b4588d32ee2d"
+        }
+      ],
+      "date": "2026-06-14",
+      "time": "14:27",
+      "total": 20.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "浆小白·豆浆夜市·肠粉·小笼包·（交通大学店）",
       "items": [
+        {
+          "name": "小白甜豆浆",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "6359235b2201"
+        },
         {
           "name": "三鲜蒸饺",
           "quantity": 1,
@@ -2412,6 +3361,28 @@
       "locationLabel": "新天地（徕卡办公室）"
     },
     {
+      "restaurant": "红集牌高品质水果（日月光店）",
+      "items": [
+        {
+          "name": "红集乌梅凤梨.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9ba2a7067b50"
+        },
+        {
+          "name": "随心自选双拼果切.250",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "69969dff5b3b"
+        }
+      ],
+      "date": "2026-06-10",
+      "time": "15:11",
+      "total": 14.81,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "盖饭邦·长沙菜(南里食集店)",
       "items": [
         {
@@ -2430,6 +3401,18 @@
     {
       "restaurant": "ZOONANA首尔炸鸡（徐家汇店）",
       "items": [
+        {
+          "name": "韩式炸无骨鸡块2块",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9cb463bd9cbf"
+        },
+        {
+          "name": "BHC同款芝士球1颗",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9edf5b179e5d"
+        },
         {
           "name": "三拼炸鸡～多种口味一次满足",
           "quantity": 1,
@@ -2530,6 +3513,22 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "gluglu面包（思南路店）",
+      "items": [
+        {
+          "name": "抹茶米麻薯流心挞",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "0f682ee35021"
+        }
+      ],
+      "date": "2026-06-05",
+      "time": "17:23",
+      "total": 31.7,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "小杨生煎（黄河路店）",
       "items": [
         {
@@ -2574,6 +3573,44 @@
       "date": "2026-06-04",
       "time": "11:14",
       "total": 27.98,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
+      "restaurant": "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）",
+      "items": [
+        {
+          "name": "烤豆角串",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "bb6b8b0e502e"
+        }
+      ],
+      "date": "2026-06-03",
+      "time": "18:10",
+      "total": 57.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "宫小燕·姨妈热饮·现炖燕窝（静安店）",
+      "items": [
+        {
+          "name": "红枣牛奶/椰奶炖桃胶300ml",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "67c2d4c826e5"
+        },
+        {
+          "name": "现烤玫瑰鲜花饼",
+          "quantity": 2,
+          "mealPeriod": "snack",
+          "dishId": "1c14c9c9f34b"
+        }
+      ],
+      "date": "2026-06-03",
+      "time": "15:26",
+      "total": 23.9,
       "locationCode": "office_xintiandi",
       "locationLabel": "新天地（徕卡办公室）"
     },
@@ -2676,6 +3713,28 @@
       "date": "2026-05-30",
       "time": "18:20",
       "total": 55.6,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "有米有甜•米糕•糯米糍（徐家汇TPY店）",
+      "items": [
+        {
+          "name": "整块芒果糯米糍",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "2f8d65cc62c8"
+        },
+        {
+          "name": "草莓奶酪糯米糍",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "eac75e551e96"
+        }
+      ],
+      "date": "2026-05-30",
+      "time": "17:30",
+      "total": 23.6,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
     },
@@ -2862,6 +3921,46 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "乐购达超市（上海南站店）",
+      "items": [
+        {
+          "name": "百醇 红酒巧克力味注心饼干 48g/盒 早餐追剧休闲零食糕点办公室下午茶夹心饼干棒盒装",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "5a234a0d92fd"
+        },
+        {
+          "name": "彩虹糖 酸了心 酸劲味糖果 40g/袋 童年经典香甜脆皮多果味彩色休闲儿童节",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "278e32179fea"
+        },
+        {
+          "name": "旺仔 QQ糖 橡皮糖 菠萝味 70g/袋 经典水果口味Q弹休闲零食袋装儿童节",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "0df947bbb82d"
+        },
+        {
+          "name": "掬水轩 苹果味秀逗糖 15g/袋 先酸后甜整蛊水果糖超级酸爆酸变态酸",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9f8eb4044645"
+        },
+        {
+          "name": "伊利 玉米香雪糕 65g/支 玉米造型蛋卷外皮搭配香浓玉米冰淇淋冰激凌休闲冷饮",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "d9bb198d16c1"
+        }
+      ],
+      "date": "2026-05-24",
+      "time": "15:57",
+      "total": 28.97,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "藕巷藕汤饭",
       "items": [
         {
@@ -3002,6 +4101,38 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "TEA'DAY·时下有茶（无限极荟店）",
+      "items": [
+        {
+          "name": "杨梅百香观音",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "a10c536a00d6"
+        }
+      ],
+      "date": "2026-05-20",
+      "time": "14:53",
+      "total": 24.0,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
+      "restaurant": "TEA'DAY·时下有茶（无限极荟店）",
+      "items": [
+        {
+          "name": "杨梅百香观音",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "a10c536a00d6"
+        }
+      ],
+      "date": "2026-05-20",
+      "time": "14:23",
+      "total": 19.0,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "紫燕百味鸡（打浦店）",
       "items": [
         {
@@ -3018,6 +4149,28 @@
       "locationLabel": "新天地（徕卡办公室）"
     },
     {
+      "restaurant": "红集牌高品质水果（日月光店）",
+      "items": [
+        {
+          "name": "随心自选双拼果切.250",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "69969dff5b3b"
+        },
+        {
+          "name": "红集乌梅凤梨.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9ba2a7067b50"
+        }
+      ],
+      "date": "2026-05-19",
+      "time": "14:15",
+      "total": 14.81,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "小杨生煎（黄河路店）",
       "items": [
         {
@@ -3030,6 +4183,28 @@
       "date": "2026-05-19",
       "time": "11:09",
       "total": 28.4,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
+      "restaurant": "盛果仓（老西门店·果切·水果捞）",
+      "items": [
+        {
+          "name": "空运云南黑炭杨梅约250克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "d09db379573b"
+        },
+        {
+          "name": "凤梨夹乌梅约250克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "bce4bcfac3b6"
+        }
+      ],
+      "date": "2026-05-18",
+      "time": "13:26",
+      "total": 31.8,
       "locationCode": "office_xintiandi",
       "locationLabel": "新天地（徕卡办公室）"
     },
@@ -3090,6 +4265,28 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "红集牌高品质水果（日月光店）",
+      "items": [
+        {
+          "name": "赣南橙子鲜切.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "92af72b893c3"
+        },
+        {
+          "name": "红集乌梅凤梨.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9ba2a7067b50"
+        }
+      ],
+      "date": "2026-05-15",
+      "time": "16:05",
+      "total": 15.79,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "共禾之约·轻食健康餐（利园店）",
       "items": [
         {
@@ -3119,6 +4316,12 @@
           "quantity": 1,
           "mealPeriod": "dinner",
           "dishId": "e9fb87c884a4"
+        },
+        {
+          "name": "BHC同款芝士球1颗",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9edf5b179e5d"
         }
       ],
       "date": "2026-05-13",
@@ -3137,6 +4340,12 @@
           "dishId": "e9fb87c884a4"
         },
         {
+          "name": "BHC同款芝士球1颗",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9edf5b179e5d"
+        },
+        {
           "name": "三拼炸鸡～多种口味一次满足",
           "quantity": 1,
           "mealPeriod": "dinner",
@@ -3148,6 +4357,62 @@
       "total": 90.7,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "红集牌高品质水果（日月光店）",
+      "items": [
+        {
+          "name": "红集品牌西瓜果切.250-500g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "f951719dc6b4"
+        },
+        {
+          "name": "红集乌梅凤梨.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9ba2a7067b50"
+        },
+        {
+          "name": "赣南橙子鲜切.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "92af72b893c3"
+        }
+      ],
+      "date": "2026-05-13",
+      "time": "17:09",
+      "total": 24.69,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
+      "restaurant": "红集牌高品质水果（日月光店）",
+      "items": [
+        {
+          "name": "红集乌梅凤梨.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9ba2a7067b50"
+        },
+        {
+          "name": "红集品牌西瓜果切.250-500g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "f951719dc6b4"
+        },
+        {
+          "name": "赣南橙子鲜切.250g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "92af72b893c3"
+        }
+      ],
+      "date": "2026-05-13",
+      "time": "17:03",
+      "total": 30.69,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
     },
     {
       "restaurant": "泰太太·泰式打抛饭（环宇荟店）",
@@ -3214,6 +4479,28 @@
       "locationLabel": "新天地（徕卡办公室）"
     },
     {
+      "restaurant": "红集牌高品质水果（日月光店）",
+      "items": [
+        {
+          "name": "随心自选双拼果切.250",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "69969dff5b3b"
+        },
+        {
+          "name": "草莓+凤梨乌梅+乌梅小番茄.350g",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "26f8b5b34707"
+        }
+      ],
+      "date": "2026-05-11",
+      "time": "14:02",
+      "total": 19.81,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "尝想来·桂林米粉（人民广场店）",
       "items": [
         {
@@ -3262,6 +4549,44 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "茉莉奶白（上海太平洋新天地店）",
+      "items": [
+        {
+          "name": "针王蜜瓜",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "0e2a7ae0e771"
+        }
+      ],
+      "date": "2026-05-09",
+      "time": "14:09",
+      "total": 15.0,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
+      "restaurant": "辣风芹·新疆炒米粉(淮海中路店)",
+      "items": [
+        {
+          "name": "炸骨肉相连",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "72f976f13911"
+        },
+        {
+          "name": "炸鱼排",
+          "quantity": 2,
+          "mealPeriod": "snack",
+          "dishId": "2696650af4d7"
+        }
+      ],
+      "date": "2026-05-09",
+      "time": "11:25",
+      "total": 15.95,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "宽的窄的面馆(茂名路店)",
       "items": [
         {
@@ -3298,6 +4623,28 @@
       "total": 29.9,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "盛果仓（老西门店·果切·水果捞）",
+      "items": [
+        {
+          "name": "洗净美早樱桃+凤梨果切约220克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "c18ce793abee"
+        },
+        {
+          "name": "自选水果桶约400克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "bded8fac5f38"
+        }
+      ],
+      "date": "2026-05-08",
+      "time": "14:11",
+      "total": 25.89,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
     },
     {
       "restaurant": "吉祥馄饨·饺子（大林店）",
@@ -3412,6 +4759,22 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）",
+      "items": [
+        {
+          "name": "烤辣椒串",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "4a9918492955"
+        }
+      ],
+      "date": "2026-05-04",
+      "time": "17:23",
+      "total": 83.57,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "皇不管夜包子(徐汇店)",
       "items": [
         {
@@ -3434,8 +4797,36 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "盛果仓（徐汇店·果切·水果捞）",
+      "items": [
+        {
+          "name": "云南花香蓝莓 125g/盒",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "07ed63f7b8b3"
+        },
+        {
+          "name": "新鲜凤梨果切约250克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "7d4f32bc85f7"
+        }
+      ],
+      "date": "2026-05-03",
+      "time": "21:24",
+      "total": 21.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "对酒当歌地道川菜（肇嘉浜路店）",
       "items": [
+        {
+          "name": "武林香辣鸭头",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "5bdbed1372df"
+        },
         {
           "name": "鲜椒土豆丝+米饭1份",
           "quantity": 1,
@@ -3505,6 +4896,12 @@
           "quantity": 1,
           "mealPeriod": "dinner",
           "dishId": "de25f6f56445"
+        },
+        {
+          "name": "军屯锅盔",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "ec2a9595d70e"
         }
       ],
       "date": "2026-04-24",
@@ -3648,6 +5045,22 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "LEACH栗其（巨鹿路店）",
+      "items": [
+        {
+          "name": "蜂巢焦糖鲜牛乳茶",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "a60fdad46df8"
+        }
+      ],
+      "date": "2026-04-21",
+      "time": "13:41",
+      "total": 35.1,
+      "locationCode": "office_xintiandi",
+      "locationLabel": "新天地（徕卡办公室）"
+    },
+    {
       "restaurant": "FoodGame超级厨房(日月光店)",
       "items": [
         {
@@ -3756,6 +5169,22 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "梧桐姥姥(上海徐汇日月光店)",
+      "items": [
+        {
+          "name": "Amazing",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "60033b9c967d"
+        }
+      ],
+      "date": "2026-04-19",
+      "time": "12:21",
+      "total": 22.28,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "山东杂粮煎饼（天钥桥路店）",
       "items": [
         {
@@ -3768,6 +5197,56 @@
       "date": "2026-04-19",
       "time": "09:22",
       "total": 15.48,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "舔口嗒嘴·苕皮豆干烧烤（亚新广场店）",
+      "items": [
+        {
+          "name": "烤辣椒串",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "4a9918492955"
+        },
+        {
+          "name": "烤豆角串",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "bb6b8b0e502e"
+        },
+        {
+          "name": "烤鱼豆腐",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "caea35a4e682"
+        }
+      ],
+      "date": "2026-04-18",
+      "time": "19:14",
+      "total": 42.18,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "茶百道（天钥桥路店）",
+      "items": [
+        {
+          "name": "西瓜啵啵",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "66b71f912204"
+        },
+        {
+          "name": "斑斓青团",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "2fdbae7adfa6"
+        }
+      ],
+      "date": "2026-04-18",
+      "time": "16:29",
+      "total": 20.0,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
     },
@@ -3875,6 +5354,12 @@
           "quantity": 1,
           "mealPeriod": "lunch",
           "dishId": "51bf12059bf3"
+        },
+        {
+          "name": "零度可乐",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "805cb42605bc"
         }
       ],
       "date": "2026-04-05",
@@ -3964,6 +5449,28 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "ZOONANA首尔炸鸡（徐家汇店）",
+      "items": [
+        {
+          "name": "韩式炸无骨鸡块2块",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "9cb463bd9cbf"
+        },
+        {
+          "name": "BHC同款芝士球1颗",
+          "quantity": 2,
+          "mealPeriod": "snack",
+          "dishId": "9edf5b179e5d"
+        }
+      ],
+      "date": "2026-03-29",
+      "time": "19:04",
+      "total": 48.29,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "巡越夜包子（徐汇店）",
       "items": [
         {
@@ -4012,6 +5519,22 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "盛果仓（茂名公馆店·果切·水果捞）",
+      "items": [
+        {
+          "name": "柚子芒果船·固体杨枝甘露约250-300克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "b8c826b3f772"
+        }
+      ],
+      "date": "2026-03-26",
+      "time": "16:21",
+      "total": 25.8,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "东池便当（沪闵路店）",
       "items": [
         {
@@ -4040,6 +5563,22 @@
       "date": "2026-03-23",
       "time": "18:54",
       "total": 66.9,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "CHAIKU(西岸梦中心店）",
+      "items": [
+        {
+          "name": "泰奶冰淇淋茶",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "385a479b5e6a"
+        }
+      ],
+      "date": "2026-03-22",
+      "time": "14:57",
+      "total": 23.0,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
     },
@@ -4172,6 +5711,28 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "盛果仓（徐汇店·果切·水果捞）",
+      "items": [
+        {
+          "name": "水果夹干噎酸奶黄肉菠萝蜜250克",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "5fb879153e2b"
+        },
+        {
+          "name": "乌梅凤梨+乌梅番茄",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "555069710527"
+        }
+      ],
+      "date": "2026-03-08",
+      "time": "11:36",
+      "total": 37.3,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "邕味张记老友粉（中山西路店）",
       "items": [
         {
@@ -4255,6 +5816,12 @@
       "restaurant": "三米粥铺(徐汇万体馆店)",
       "items": [
         {
+          "name": "香脆牛肉饼",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "d3615e60dd94"
+        },
+        {
           "name": "青菜玉米粥",
           "quantity": 1,
           "mealPeriod": "dinner",
@@ -4270,6 +5837,22 @@
       "date": "2026-03-03",
       "time": "18:34",
       "total": 29.4,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "浆小白·肠粉·小笼包·豆浆夜市（交通大学店）",
+      "items": [
+        {
+          "name": "小白豆浆",
+          "quantity": 2,
+          "mealPeriod": "snack",
+          "dishId": "4b65753e6543"
+        }
+      ],
+      "date": "2026-03-03",
+      "time": "07:17",
+      "total": 24.35,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
     },
@@ -4405,6 +5988,12 @@
       "restaurant": "肯德基宅急送（天钥桥路店）",
       "items": [
         {
+          "name": "辣翅买一送一",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "58f3a0310755"
+        },
+        {
           "name": "堡卷随心选3件套",
           "quantity": 1,
           "mealPeriod": "dinner",
@@ -4468,6 +6057,12 @@
     {
       "restaurant": "对酒当歌地道川菜（南丹东路店）",
       "items": [
+        {
+          "name": "武林香辣鸭头",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "5bdbed1372df"
+        },
         {
           "name": "豆花牛肉",
           "quantity": 1,
@@ -4718,6 +6313,22 @@
       "locationLabel": "家（徐汇电影华苑）"
     },
     {
+      "restaurant": "喜茶（上海飞洲国际店）",
+      "items": [
+        {
+          "name": "奇兰芭乐莲雾",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "33ee954d4553"
+        }
+      ],
+      "date": "2026-01-02",
+      "time": "13:30",
+      "total": 21.5,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
       "restaurant": "泥糊破店江湖菜（徐汇店）",
       "items": [
         {
@@ -4746,6 +6357,22 @@
       "date": "2026-01-01",
       "time": "12:20",
       "total": 21.55,
+      "locationCode": "home_xuhui",
+      "locationLabel": "家（徐汇电影华苑）"
+    },
+    {
+      "restaurant": "浆小白·肠粉·小笼包·豆浆夜市（交通大学店）",
+      "items": [
+        {
+          "name": "小白豆浆",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "4b65753e6543"
+        }
+      ],
+      "date": "2025-12-31",
+      "time": "08:35",
+      "total": 10.95,
       "locationCode": "home_xuhui",
       "locationLabel": "家（徐汇电影华苑）"
     },
@@ -4961,6 +6588,12 @@
           "quantity": 1,
           "mealPeriod": "dinner",
           "dishId": "e14578de6f68"
+        },
+        {
+          "name": "军屯锅盔",
+          "quantity": 1,
+          "mealPeriod": "snack",
+          "dishId": "ec2a9595d70e"
         }
       ],
       "date": "2025-12-09",

@@ -23,6 +23,7 @@ const MEAL_PERIODS = [
   { id: "breakfast", label: "早饭" },
   { id: "lunch", label: "午饭" },
   { id: "dinner", label: "晚饭" },
+  { id: "snack", label: "小吃" },
 ];
 
 function defaultMealPeriod() {

@@ -24,7 +24,7 @@ assert payload["schemaVersion"] == 4
 assert payload["classificationVersion"] == audit["classificationVersion"]
 assert len({dish["id"] for dish in payload["dishes"]}) == len(payload["dishes"])
 assert all(
-    item.get("mealPeriod") in {"breakfast", "lunch", "dinner"} and item.get("dishId")
+    item.get("mealPeriod") in {"breakfast", "lunch", "dinner", "snack"} and item.get("dishId")
     for order in payload["orders"]
     for item in order["items"]
 )

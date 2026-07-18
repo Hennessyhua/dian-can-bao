@@ -53,3 +53,17 @@ test("all values include every meal period and location", () => {
   const candidates = buildCandidates([...repeatedDishOrders, anotherLocation], "all", "all", "all", "all");
   assert.deepEqual(new Set(candidates.map((item) => item.dishId)), new Set(["same-dish", "breakfast-dish"]));
 });
+
+test("snack filter only returns snack candidates", () => {
+  const orders = [{
+    restaurant: "奶茶店",
+    date: "2026-07-18",
+    locationCode: "office_xintiandi",
+    items: [
+      { name: "杨梅百香观音", dishId: "snack-drink", mealPeriod: "snack", quantity: 1 },
+      { name: "牛肉饭", dishId: "meal-rice", mealPeriod: "lunch", quantity: 1 },
+    ],
+  }];
+  const candidates = buildCandidates(orders, "office_xintiandi", "snack", "all", "all");
+  assert.deepEqual(candidates.map((item) => item.dishId), ["snack-drink"]);
+});

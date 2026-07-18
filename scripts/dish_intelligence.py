@@ -13,8 +13,8 @@ from statistics import median
 from typing import Any
 
 
-CLASSIFICATION_VERSION = 3
-MEAL_PERIODS = ("breakfast", "lunch", "dinner")
+CLASSIFICATION_VERSION = 4
+MEAL_PERIODS = ("breakfast", "lunch", "dinner", "snack")
 
 # 经历史订单、餐厅与商品结构逐项核对后确认的同菜别名。这里只接受明确别名，
 # 不用字符串相似度自动合并，避免把“酸汤肥牛米粉”和“酸汤肥牛套餐”等误归为一类。
@@ -26,6 +26,82 @@ CURATED_DISH_ALIASES = {
     "小炒黄牛肉 盖码饭": "小炒黄牛肉盖码饭",
     "香辣大鸡排": "正新香辣大鸡排",
 }
+
+# 经订单和商家上下文逐项确认的非正餐商品。它们可以进入“小吃”推荐池，
+# 但不会混入早、午、晚餐；餐具、调料、药品、日用品和普通配菜仍保持排除。
+CURATED_SNACK_NAMES = frozenset({
+    "Amazing",
+    "BHC同款芝士球1颗",
+    "乌梅凤梨+乌梅番茄",
+    "云南花香蓝莓 125g/盒",
+    "五香茶叶蛋",
+    "伊利 玉米香雪糕 65g/支 玉米造型蛋卷外皮搭配香浓玉米冰淇淋冰激凌休闲冷饮",
+    "免费茶叶蛋一个",
+    "军屯锅盔",
+    "凤梨夹乌梅约250克",
+    "凤梨果切.150g",
+    "剥壳荔枝+芒果+西瓜.350g",
+    "双拼鸡蛋仔",
+    "奇兰芭乐莲雾",
+    "大口吃芒果果切约200克",
+    "小串冰糖葫芦5串任选",
+    "小白甜豆浆",
+    "小白豆浆",
+    "当季双拼自选果切约220克",
+    "彩虹糖 酸了心 酸劲味糖果 40g/袋 童年经典香甜脆皮多果味彩色休闲儿童节",
+    "必喝系列5选2",
+    "抹茶米麻薯流心挞",
+    "掬水轩 苹果味秀逗糖 15g/袋 先酸后甜整蛊水果糖超级酸爆酸变态酸",
+    "整块芒果糯米糍",
+    "斑斓青团",
+    "新鲜凤梨果切约250克",
+    "旺仔 QQ糖 橡皮糖 菠萝味 70g/袋 经典水果口味Q弹休闲零食袋装儿童节",
+    "曼谷日落·咸法酪泰奶",
+    "杨桃三重甘",
+    "杨梅百香观音",
+    "柚子芒果船·固体杨枝甘露约250-300克",
+    "武林香辣鸭头",
+    "水果夹干噎酸奶黄肉菠萝蜜250克",
+    "泰奶冰淇淋茶",
+    "洗净美早樱桃+凤梨果切约220克",
+    "炸泡菜饺子 튀긴만두",
+    "炸淀粉肠",
+    "炸骨肉相连",
+    "炸鱼排",
+    "炸鱼豆腐",
+    "烤豆角串",
+    "烤辣椒串",
+    "烤鱼豆腐",
+    "爆汁炸鸡块",
+    "现烤玫瑰鲜花饼",
+    "百醇 红酒巧克力味注心饼干 48g/盒 早餐追剧休闲零食糕点办公室下午茶夹心饼干棒盒装",
+    "空运云南黑炭杨梅约250克",
+    "红枣牛奶/椰奶炖桃胶300ml",
+    "红集乌梅凤梨.250g",
+    "红集品牌西瓜果切.250-500g",
+    "自选水果桶约400克",
+    "草莓+凤梨乌梅+乌梅小番茄.350g",
+    "草莓奶酪糯米糍",
+    "蜂巢焦糖鲜牛乳茶",
+    "西瓜啵啵",
+    "赣南橙子鲜切.250g",
+    "辣翅买一送一",
+    "避风塘大虾塔可",
+    "酒酿红豆豆花冻+古法桂花酒酿",
+    "酒酿芝麻汤圆",
+    "醪糟黑芝麻汤圆",
+    "金砖丝袜奶茶 ❥→连冰块都是用奶茶做的",
+    "针王蜜瓜",
+    "锁鲜卤鸭脖",
+    "随心自选双拼果切.250",
+    "零度可乐",
+    "韩式炸无骨鸡块2块",
+    "香脆牛肉饼",
+    "正新香辣大鸡排",
+    "黄金小馒头4个",
+    "黄金薯塔",
+    "분모자떡볶이 韩式炒年糕",
+})
 
 # 逐项审阅后确认：这些条目不能独立构成一餐。
 CURATED_EXCLUDED_NAMES = frozenset({
@@ -311,6 +387,8 @@ def canonicalize_dish_name(name: str) -> tuple[str, str]:
 
 def classify_item_role(name: str, restaurant: str, sibling_names: list[str]) -> tuple[bool, str, str]:
     """返回 (是否主菜, 来源, 原因)。"""
+    if name in CURATED_SNACK_NAMES:
+        return True, "curated", "逐项审阅：可作为奶茶、甜点、水果或小吃推荐"
     if name in CURATED_EXCLUDED_NAMES:
         return False, "curated", "历史条目逐项审阅：附属项、非正餐或非餐饮产品"
     if name in CURATED_INCLUDED_NAMES:
@@ -343,6 +421,8 @@ def classify_item_role(name: str, restaurant: str, sibling_names: list[str]) -> 
 
 
 def infer_meal_period(name: str, observations: list[dict[str, str]]) -> tuple[str, str]:
+    if name in CURATED_SNACK_NAMES:
+        return "snack", "逐项审阅：非正餐商品归入小吃"
     if name in BREAKFAST_OVERRIDES:
         return "breakfast", "菜品语义与历史时间共同确认早餐"
 

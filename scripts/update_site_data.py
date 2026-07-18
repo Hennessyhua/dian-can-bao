@@ -98,7 +98,7 @@ def resolve_location(address: str, private_mapping: dict[str, str]) -> str | Non
         return mapped
     if "电影华苑" in normalized:
         return "home_xuhui"
-    if "新天地" in normalized or "徕卡" in normalized:
+    if "新天地" in normalized or "徕卡" in normalized or "新茂" in normalized:
         return "office_xintiandi"
     return None
 
