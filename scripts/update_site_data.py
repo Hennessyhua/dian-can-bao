@@ -46,13 +46,18 @@ LOCATIONS = {
 }
 
 # 兼容商家常见的中英文括号混用，例如 `（半份5片)`。
-BRACKET_NOTE_PATTERN = re.compile(r"[【\[（(][^】\]）)]*[】\]）)]")
+# 只匹配最内层括号，配合 clean_dish_name 的循环逐层剥离。这样能正确处理
+# `菜名（说明）(规格【选项】)`，不会因内层括号而遗留一个孤立的 `)`。
+BRACKET_NOTE_PATTERN = re.compile(r"[【\[（(][^【\[（(】\]）)]*[】\]）)]")
 LEADING_DECORATION_PATTERN = re.compile(r"^[\s·•✦★☆🌟➕+丨|｜:：!！—_-]+")
 MARKETING_PREFIX_PATTERN = re.compile(
     r"^(?:销量TOP|TOP|爆款|热销|人气王|门店招牌|招牌必点|经典|精选|尝鲜|直播专享|"
-    r"收藏特惠|收藏门店|福利加料|福利|特惠|限时特惠|新客特惠|新年特惠|"
-    r"元气满满|好吃入味|优选好物|超豪华)\s*[丨|｜:：!！·-]*\s*",
+    r"收藏特惠|收藏门店|福利加料|福利|特惠|限时特惠|新客特惠|新年特惠|新品|招牌产品|"
+    r"元气满满|好吃入味|优选好物|超豪华)\s*[🔥🌟★☆丨|｜:：!！·-]*\s*",
     re.IGNORECASE,
+)
+BRACKETED_MARKETING_PREFIX_PATTERN = re.compile(
+    r"^[『「【\[]\s*(?:爆款|热销|新品|招牌)\s*[🔥🌟★☆]*\s*[』」】\]]\s*"
 )
 
 
@@ -120,6 +125,7 @@ def clean_dish_name(value: str) -> str:
         previous = name
         name = BRACKET_NOTE_PATTERN.sub("", name)
         name = LEADING_DECORATION_PATTERN.sub("", name).strip()
+        name = BRACKETED_MARKETING_PREFIX_PATTERN.sub("", name).strip()
         name = MARKETING_PREFIX_PATTERN.sub("", name).strip()
 
     # 清理删除标签后遗留在名称两端的分隔符，但保留名称中间的组合信息。
@@ -255,10 +261,11 @@ def scrape_and_merge() -> list[dict[str, Any]]:
 
     print("正在打开美团订单页，请在浏览器中完成登录或验证…")
     incoming = scrape_orders()
-    existing = load_json(PRIVATE_RAW, None)
-    if existing is None:
-        existing = load_json(LEGACY_RAW, []) or []
-    merged = merge_orders(existing, incoming)
+    # 旧账号数据仍是完整历史基线；私有库和本次采集依次覆盖同指纹记录，
+    # 以保留新来源中的 orderId 等更完整字段。
+    legacy = load_json(LEGACY_RAW, []) or []
+    existing = load_json(PRIVATE_RAW, []) or []
+    merged = merge_orders(merge_orders(legacy, existing), incoming)
     atomic_write_json(PRIVATE_RAW, merged)
     print(f"私有原始订单已更新：{len(merged)} 条")
     return merged
@@ -272,10 +279,13 @@ def main() -> None:
     if args.scrape:
         raw_orders = scrape_and_merge()
     else:
-        source = PRIVATE_RAW if PRIVATE_RAW.exists() else LEGACY_RAW
-        raw_orders = load_json(source, []) or []
+        legacy = load_json(LEGACY_RAW, []) or []
+        private = load_json(PRIVATE_RAW, []) or []
+        raw_orders = merge_orders(legacy, private)
         if not raw_orders:
             raise SystemExit("没有找到私有订单。请先运行 python3 scripts/update_site_data.py --scrape")
+        # 将迁移后的完整原始库固化到私有 SSOT；该目录受 .gitignore 保护。
+        atomic_write_json(PRIVATE_RAW, raw_orders)
 
     payload, audit = build_public_payload_with_audit(raw_orders)
     assert_public_payload_is_safe(payload)

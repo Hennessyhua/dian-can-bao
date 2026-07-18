@@ -146,6 +146,8 @@ class PublicDataTests(unittest.TestCase):
             "🌟🌟🌟五常稻花香米饭": "五常稻花香米饭",
             "福利加料 | 响铃卷【点💗收藏】": "响铃卷",
             "【尝鲜】武林香辣鸭头（半份5片)": "武林香辣鸭头",
+            "Amazing（浮云MG香草籽珍珠酪酪金骏眉冰博克）(660毫升 热 不额外加糖【J0】)": "Amazing",
+            "『爆款🔥』大份黄焖鸡+10任选3配菜+香米饭": "大份黄焖鸡+10任选3配菜+香米饭",
         }
         for source, expected in examples.items():
             with self.subTest(source=source):
@@ -164,6 +166,22 @@ class PublicDataTests(unittest.TestCase):
         merged = MODULE.merge_orders([legacy], [incoming])
         self.assertEqual(len(merged), 1)
         self.assertEqual(merged[0]["orderId"], "new-external-id")
+
+    def test_merge_keeps_distinct_orders_from_two_accounts(self):
+        account1 = {
+            "restaurant": "旧账号餐厅", "items": [{"name": "牛肉饭", "quantity": 1}],
+            "date": "2026-01-01", "time": "12:00", "total": 30,
+            "address": "电影华苑",
+        }
+        account2 = {
+            "orderId": "account2-order", "restaurant": "新账号餐厅",
+            "items": [{"name": "鸡肉饭", "quantity": 1}],
+            "date": "2026-07-01", "time": "18:00", "total": 35,
+            "address": "新茂大厦",
+        }
+        merged = MODULE.merge_orders([account1], [account2])
+        self.assertEqual(len(merged), 2)
+        self.assertEqual([order["date"] for order in merged], ["2026-07-01", "2026-01-01"])
 
 
 if __name__ == "__main__":
